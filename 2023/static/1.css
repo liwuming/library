@@ -1,0 +1,40 @@
+*{margin:0;padding:0}
+
+body{
+	background: #f5f6f7;
+}
+
+.main{
+	margin:0 auto;
+	width:800px;
+	background: #fff;
+}
+img{margin:0;padding:0;}
+.list-section-one{
+	margin:0 auto;
+	width:800px;
+	height:500px;
+	overflow:hidden;
+	background: #fff;
+	position:relative;
+}
+.list-section-two{
+	width:100%;
+	min-height:500px;
+	overflow:auto;
+	position:absolute;
+	left:0;top:0;
+}
+.list-section-two>.item-section{
+	margin:0;padding:0;
+	width:100%;
+	font-size:0;
+	display:block;
+}
+
+/*
+图片下方有空白间隙,使用display:flex布局可完美解决
+*/
+.item-section>img{
+	max-width:100%;
+}

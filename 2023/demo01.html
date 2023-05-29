@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./static/1.css">
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+</head>
+<body>
+	<div id="app" class="main">
+		<button type="button" @click="start">start</button>
+		<button type="button" @click="stop">stop</button>
+		<div class="list-section-one" ref="one">
+			<div class="list-section-two" ref="two" v-bind:style="{ top: top + 'px' }">
+				<div class="item-section" v-for="(image,index) in images" :key="index">
+					<img :src="image"/>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		const vm=new Vue({
+			el:"#app",
+			data:{
+				top:0,
+				nums:0,
+				images:[
+					"./images/1.jpg",
+					"./images/2.jpg",
+					"./images/3.jpg",
+					// "./images/4.jpg",
+					// "./images/5.jpg"
+				],
+				height1:0,
+				height2:0,
+				timer:null
+			},
+			methods:{
+				start(){
+					this.top=-this.height1;
+					this.timer=setInterval(()=>{
+						console.log(this.nums*this.height3-this.height1);
+						console.log(this.nums,this.height3,this.height2,this.nums*this.height3,this.height1);
+						if(this.top<=-(this.nums*this.height3-this.height1)){
+							console.log(11);
+							this.top = -10;
+							//this.stop();
+						}else{
+							console.log(20);
+							this.top -= 10;	
+						}
+					},50);
+				},
+				stop(){
+					clearInterval(this.timer);
+				}
+			},
+			mounted(){
+				this.nums=this.images.length+1;
+				this.height1=this.$refs.one.offsetHeight;
+				this.height3=this.$refs.two.firstChild.offsetHeight;
+
+				console.log(this.$refs.two.firstChild);
+				console.log(this.height3);
+				
+				console.log(this.$refs.two);
+				this.height2=5*this.height3;
+				console.log(this.height1,this.height2,this.height3);
+				if(this.images.length>1){
+					this.images=this.images.reverse();
+					this.images.push(this.images[0]);
+					this.images=this.images.reverse();
+					this.images.push(this.images[1]);
+					//img=img.reverse().push(this.images[0]);
+					//console.log(img);
+					//this.images=img;
+					//this.images.push(...this.images);
+					this.start();
+				}
+			}
+		});
+	</script>
+</body>
+</html>
