@@ -10,20 +10,20 @@ body{
 	background: #fff;
 }
 img{margin:0;padding:0;}
-.list-section-one{
+.list-section{
 	margin:0 auto;
 	width:800px;
 	height:500px;
 	overflow:hidden;
 	background: #fff;
-	position:relative;
+}
+.list-section-one{
+    transition: all 0ms ease-in 0s;
+    overflow: hidden;
 }
 .list-section-two{
 	width:100%;
-	min-height:500px;
 	overflow:auto;
-	position:absolute;
-	left:0;top:0;
 }
 .list-section-two>.item-section{
 	margin:0;padding:0;
