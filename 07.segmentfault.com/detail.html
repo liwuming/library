@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title data-react-helmet="true">java - 我终于会写 Java 的定时任务了！_个人文章 - SegmentFault 思否</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta rel="apple-touch-icon" href="https://static.segmentfault.com/main_site/86059dee/touch-icon.png">
+    <meta name="msapplication-square150x150logo" content="https://static.segmentfault.com/main_site/86059dee/touch-icon.png">
+    <meta httpequiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ">
+    <meta name="apple-itunes-app" content="app-id=958101793, app-argument=">
+    <meta property="qc:admins" content="15317273575564615446375">
+    <meta name="msapplication-TileColor" content="#009a61">
+    <meta name="sogou_site_verification" content="MKVKCoIjwL">
+    <meta name="360-site-verification" content="737314c9bf48873a1a0a22295203d9d1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.segmentfault.com/main_site/86059dee/favicon.ico">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/questions" title="SegmentFault 最新问题">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/blogs" title="SegmentFault 最新文章">
+    <link rel="stylesheet" href="https://static.segmentfault.com/main_site/86059dee/umi.css">
+    <!--
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      window.publicPath =
+        window.resourceBaseUrl ||
+        "https://static.segmentfault.com/main_site/86059dee/";
+    </script>
+    <script>
+      //! umi version: 3.5.20
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e23800c454aa573c0ccb16b52665ac26";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script>
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=G-MJYFRXB3ZX";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ga, s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MJYFRXB3ZX");
+    </script>
+-->
+  <meta data-react-helmet="true" name="keywords" content="后端,java,spring"><meta data-react-helmet="true" name="description" content="前言学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：你写一个定时任务就好了。写个定时任务让他去爬取就行了。我不会，所以现在得补回来了，..."><meta data-react-helmet="true" name="userId" value="" id="SFUserId"><meta data-react-helmet="true" name="userRank" value="" id="SFUserRank"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="twitter:image" content="https://segmentfault.com/img/bVc3k9I?spec=cover"><meta data-react-helmet="true" name="twitter:site" content="@segment_fault"><meta data-react-helmet="true" name="twitter:creator" content="@segmentfault"><meta data-react-helmet="true" name="twitter:title" content="我终于会写 Java 的定时任务了！"><meta data-react-helmet="true" name="og:type" content="article"><meta data-react-helmet="true" name="og:image" content="https://segmentfault.com/img/bVc3k9I?spec=cover"><meta data-react-helmet="true" name="og:title" content="我终于会写 Java 的定时任务了！"><meta data-react-helmet="true" name="og:description" content="前言学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：你写一个定时任务就好了。写个定时任务让他去爬取就行了。我不会，所以现在得补回来了，..."><meta data-react-helmet="true" name="og:url" content="https://segmentfault.com/a/1190000042702969"><meta data-react-helmet="true" name="og:site_name" content="SegmentFault 思否"><meta data-react-helmet="true" name="msvalidate.01" content="2C018C53297C8388F3E7052F5E9CA6AF"><meta data-react-helmet="true" name="event-object" value="{&quot;current&quot;: [&quot;article&quot;, [&quot;1190000042702969&quot;]], &quot;root&quot;: [&quot;article&quot;, &quot;1190000042702969&quot;]}" id="SFEventObject"><script data-react-helmet="true" async="true" defer="true" data-domain="segmentfault.com" src="https://stats.segmentfault.net/js/plausible.js"></script><script data-react-helmet="true" type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://google.com/article"
+            },
+            "name": "我终于会写 Java 的定时任务了！",
+            "headline": "我终于会写 Java 的定时任务了！",
+            "image": "/img/bVc3k9I?spec=cover",
+            "datePublished": "2022-10-27T11:55:19.000Z",
+            "dateModified": "2022-10-27T11:55:19.000Z",
+            "url": "https://segmentfault.com/a/1190000042702969",
+            "author": {
+              "@type": "Person",
+              "name": "god23bin"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SegmentFault",
+              "logo": {
+                "@type": "ImageObject",
+                "url":
+                  "https://assets.segmentfault.com/v-5fc4b0b2/global/img/static/touch-icon.png"
+              }
+            }
+          }</script><link rel="preload" href="https://static.segmentfault.com/main_site/86059dee/layouts__index~p__Video__Add.chunk.css" as="style" /><link rel="stylesheet" href="https://static.segmentfault.com/main_site/86059dee/layouts__index~p__Video__Add.chunk.css" />
+<link rel="preload" href="https://static.segmentfault.com/main_site/86059dee/layouts__index.chunk.css" as="style" /><link rel="stylesheet" href="https://static.segmentfault.com/main_site/86059dee/layouts__index.chunk.css" />
+<link rel="preload" href="https://static.segmentfault.com/main_site/86059dee/p__ArticleDetail.chunk.css" as="style" /><link rel="stylesheet" href="https://static.segmentfault.com/main_site/86059dee/p__ArticleDetail.chunk.css" />
+</head>
+  <body>
+    <div id="root"><style></style><div class="d-none d-lg-block text-center"><div id="OA_holder_5" class="ad-container" style="display:none"></div></div><div class="position-fixed" style="top:58px;left:0;right:0;margin:auto;z-index:5"><div class="toast-container position-absolute top-0 start-50 translate-middle-x"></div><div class="toast-container position-absolute top-0 start-50 translate-middle-x"></div></div><div id="root-top-container"></div><nav id="sf-header" class="bg-white shadow-sm sticky-top navbar navbar-expand-lg navbar-light"><div class="position-relative container"><div aria-controls="basic-navbar-nav" aria-label="Toggle navigation" class="self-nav-toogle___jVdh3 navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></div><div class="left-wrap d-flex justify-content-between align-items-center nav-grow"><a href="/" class="sf-header___2cUz5 me-3 me-md-0 me-lg-3 navbar-brand"><img src="https://static.segmentfault.com/main_site/86059dee/static/logo-b.d865fc97.svg" width="139" height="26" class="d-none d-lg-block" alt="segmentfault"/><img src="https://static.segmentfault.com/main_site/86059dee/static/sf-icon-small.82a498f6.svg" width="30" height="30" class="d-block d-lg-none" alt="segmentfault"/></a><div class="d-flex lg-none align-items-center"><a href="/search" aria-label="搜索" class="d-inline-block text-center text-secondary position-relative" style="font-size:20px;width:44px"><i class="fa-fw far fa-magnifying-glass"></i></a><a class="btn btn-primary d-lg-none ms-2" href="/user/login">注册登录</a></div></div><div class="justify-content-between navbar-collapse collapse" id="basic-navbar-nav"><div class="fw-bold navbar-nav"><a href="/questions" data-rr-ui-event-key="/questions" class="nav-link">问答</a><a href="/blogs" data-rr-ui-event-key="/blogs" class="nav-link">专栏</a><a href="/tags" data-rr-ui-event-key="/tags" class="nav-link">标签</a><a href="/jobs" data-rr-ui-event-key="/jobs" class="d-flex align-items-center nav-link">招聘<i class="ms-1 text-danger fas fa-fire" style="width:0.88rem;vertical-align:text-bottom"></i></a><a href="/events" data-rr-ui-event-key="/events" class="nav-link">活动</a><div class="lg-show  hover-down  nav-item dropdown"><a id="basic-nav-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link" tabindex="0">发现</a></div></div><div class="d-none d-xl-block px-3 header-search___28AtS"><div id="header-tsearch-toogle" class="dropdown"><div class="position-relative dropdown-toggle" id="react-aria-2" aria-expanded="false"><div class="icon-search"><i class="far fa-magnifying-glass text-secondary"></i></div><form action="/search" autoComplete="off" class=""><input type="text" name="q" placeholder="搜索关键字" aria-label="搜索" value="" class="me-sm-2 w-100 input form-control"/></form></div><div data-bs-popper="static" class="w-100 dropdown-menu"><a href="https://www.bing.com/search?q=site:segmentfault.com%20" target="_blank" aria-selected="true" data-rr-ui-dropdown-item="" class="dropdown-item active"><span class="search-name">✓</span>使用“Bing”搜本站</a><a href="https://cse.google.com/cse?cx=007438528117617975633:unedhtbhte0&amp;q=" target="_blank" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>使用“Google”搜本站</a><a href="http://www.baidu.com/s?wd=site%3Asegmentfault.com%20" target="_blank" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>使用“百度”搜本站</a><a href="/search?q=" target="_self" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>站内搜索</a></div></div></div><nav class="p-0 navbar navbar-expand navbar-light"><div class="d-none d-lg-block d-xl-none me-2 nav-item"><a href="/search" aria-label="搜索" class="nav-link"><i class="fa-fw far fa-magnifying-glass text-secondary font-size-20"></i></a></div><div class="d-none d-lg-flex me-2 me-md-0 nav-item"><a href="/user/login" class="btn btn-primary">注册登录</a></div></nav></div></div></nav><div class="d-none d-xl-flex justify-content-center"><div id="OA_holder_2" class="ad-container" style="display:block"></div></div><div class="article-content pt-3 pt-sm-0 container"><nav aria-label="breadcrumb" class="font-size-14 px-0 my-0 position-relative mx-4 mx-md-0 d-none d-sm-block" style="z-index:1"><ol class="breadcrumb bg-transparent"><li class="breadcrumb-item"><a href="/">首页</a></li><li class="breadcrumb-item"><a href="/blogs">专栏</a></li><li class="breadcrumb-item"><a href="/t/java/blogs">java</a></li><li class="breadcrumb-item active" aria-current="page">文章详情</li></ol></nav><div class="row"><div class="col-xl w-0 col-12"><div class="sticky-wrap sticky-top functional-area-left d-none d-xl-flex justify-content-center pt-5 functional-area-left2"><div role="group" class="align-items-center btn-group-vertical"><button aria-label="点赞" type="button" class="func-btn mainLike  sflex-center shadow-sm rounded-circle main-lg-Like mb-3 btn btn-outline-primary"><i class="far fa-thumbs-up"></i><span class="mainLikeNum ">1</span></button><button aria-label="收藏" type="button" class="func-btn sflex-center rounded-circle mb-2 btn btn-outline-secondary"><i class="far fa-bookmark"></i></button><a class="func-btn sflex-center btn btn-outline-secondary rounded-circle mb-2" href="#comment-area" aria-label="评论"><i class="far fa-message-lines"></i></a><div class="dropdown"><a href="###" class="func-btn nav-tab-item  rounded-pill btn btn-outline-secondary sflex-center rounded-circle dropdown-toggle"><i class="far fa-share-nodes"></i></a></div></div></div><canvas hidden="" class="qrcode"></canvas><div class="mb-4 card"><img class="card-img-top w-100 rounded-top" src="https://static.segmentfault.com/main_site/86059dee/static/bg-219.7a1acf4f.svg" style="background:no-repeat center url(/img/bVc3k9I?spec=cover);background-size:cover" alt="头图"/><div class="p-lg-30 position-relative card-body"><h1 class="h2 mb-3"><a href="/a/1190000042702969" class="text-body">我终于会写 Java 的定时任务了！</a></h1><div class="d-flex align-items-center justify-content-between flex-wrap mb-4"><div class="d-flex align-items-center flex-wrap"><a href="/u/god23bin" class="d-flex align-items-center"><picture class="me-2 "><img class="rounded-circle d-inline-block" width="32" height="32" src="https://avatar-static.segmentfault.com/104/271/1042717788-607aa9598cd2e_huge128" alt=""/></picture><strong class="align-self-center font-size-14">god23bin</strong></a><time class="text-secondary font-size-14" dateTime="2022-10-27T11:55:19.000Z" itemProp="datePublished" style="margin-left:12px">发布于 <!-- -->10 月 27 日</time><span class="font-size-14 text-secondary ms-2">广东</span></div></div><div id="OA_holder_25" class="ad-container" style="display:block"></div><article class="article fmt article-content "><h2>前言</h2><p>学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：</p><blockquote><p>你写一个定时任务就好了。</p><p>写个定时任务让他去爬取就行了。</p></blockquote><p>我不会，所以现在得补回来了，欠下的终究要还的，/(ㄒoㄒ)/~~</p><h2>定时任务是什么？</h2><p>大家都用过闹钟，闹钟可以说是一种定时任务。</p><p>比如我们设定了周一到周五早上7点半的时间响铃，那么闹钟就会在周一到周五的早上7点半进行响铃，这种就是定时的任务。时间定在 <strong>周一到周五的早上7点半</strong> ，任务就是 <strong>响铃</strong>。</p><p>那么，在 Java 中，如何实现这样的功能呢？即<strong>如何实现定时任务呢？</strong></p><h2>定时任务的有哪些是实现方式？</h2><blockquote>说明：@Slf4j 注解来源于 Lombok ，需要引入 Lombok 依赖</blockquote><h3>纯手写单线程循环</h3><p>单线程，写一个死循环，通过线程的睡眠（等待）完成定时任务：</p><pre><code class="java">@Slf4j
+public class ThreadTaskDemo {
+    public static void main(String[] args) {
+        timer1();
+    }
+
+    public static void timer1() {
+        new Thread(() -&gt; {
+            while (true) {
+                log.info(&quot;当前时间 {}&quot;, LocalDateTime.now());
+                try {
+                    // 每个1秒执行一次
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+}</code></pre><p>控制台输出：</p><pre><code class="bash">14:02:35.893 [Thread-0] INFO cn.god23bin.demo.timer.ThreadTaskDemo - 当前时间 2022-10-25T14:02:35.892
+14:02:36.904 [Thread-0] INFO cn.god23bin.demo.timer.ThreadTaskDemo - 当前时间 2022-10-25T14:02:36.904
+14:02:37.907 [Thread-0] INFO cn.god23bin.demo.timer.ThreadTaskDemo - 当前时间 2022-10-25T14:02:37.907</code></pre><p>可以看到每秒执行一次，成功实现了定时任务。</p><h3>Timer 和它的小伙伴</h3><p>在 <strong>java.util</strong> 包下，有这么 3 个东西，分别是 <strong>Timer</strong> 类、<strong>TimerTask</strong> 接口、<strong>TimerThread</strong> 类，这 3 个东西就可以帮我们实现定时任务。</p><p>Timer 有这么 2 个方法（当然不止这两个，还有 4 个相关的）：</p><pre><code class="java">// 延迟delay秒后执行task任务
+public void schedule(TimerTask task, long delay);
+// 延迟delay秒后，以period间隔时间执行task任务
+public void schedule(TimerTask task, long delay, long period);</code></pre><p>TimerTask 有个 <strong>run()</strong> 抽象方法，那我们可以<strong>实现这个抽象方法作为我们的任务逻辑</strong>，由于 TimerTask 是接口，需要一个类实现它，那我们下面就用<strong>匿名内部类的方式</strong>来实现这个接口。代码如下：</p><pre><code class="java">@Slf4j
+public class TimerDemo {
+
+    public static void main(String[] args) {
+        timer1();
+    }
+
+    public static void timer1() {
+        // 单线程
+        Timer timer = new Timer();
+        log.info(&quot;1秒后执行任务A，A完成后，等待1秒开始定时执行任务B，当前时间 {}&quot;, LocalDateTime.now());
+        // 1秒后执行
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                log.info(&quot;任务A 当前时间 {}&quot;, LocalDateTime.now());
+            }
+        }, 1000); // 这里 1000，就是代表延迟 1000 毫秒后再执行
+
+        // 每隔2秒执行一次这个任务
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                log.info(&quot;定时任务B 当前时间 {}&quot;, LocalDateTime.now());
+            }
+        }, 1000, 2000); // 1000 同理，2000 即执行完本次任务后，隔 2000 毫秒后再一次执行，达到定时任务的效果
+    }
+
+}</code></pre><p>控制台输出：</p><pre><code class="bash">14:09:37.416 [main] INFO cn.god23bin.demo.timer.TimerDemo - 1秒后执行任务A，A完成后，等待1秒开始定时执行任务B，当前时间 2022-10-25T14:09:37.415
+14:09:38.428 [Timer-0] INFO cn.god23bin.demo.timer.TimerDemo - 任务A 当前时间 2022-10-25T14:09:38.428
+14:09:38.428 [Timer-0] INFO cn.god23bin.demo.timer.TimerDemo - 定时任务B 当前时间 2022-10-25T14:09:38.428
+14:09:40.443 [Timer-0] INFO cn.god23bin.demo.timer.TimerDemo - 定时任务B 当前时间 2022-10-25T14:09:40.443
+14:09:42.457 [Timer-0] INFO cn.god23bin.demo.timer.TimerDemo - 定时任务B 当前时间 2022-10-25T14:09:42.457</code></pre><p>从控制台输出的时间可以看到，任务 A 是只执行了一次，因为我们没有传递 period 参数给 schedule () 方法。而任务 B 是一个定时任务，因为传递了 period 参数，period 参数为 2000，即 2000 毫秒。</p><p>所以，任务 B 会每隔 2 秒执行一次。到这里，我们通过 Timer 实现了定时任务。下面看看基于多线程的 <code>ScheduledExecutorService</code> 接口。</p><h3>ScheduledExecutorService</h3><p><code>ScheduledExecutorService</code> 接口位于 <code>java.util.concurrent</code> 包中，是继承 <code>ExecutorService</code> 接口的。</p><p>这个接口有 4 个抽象方法（先了解一下）：</p><pre><code class="java">public ScheduledFuture&lt;?&gt; schedule(Runnable command, long delay, TimeUnit unit);
+public &lt;V&gt; ScheduledFuture&lt;V&gt; schedule(Callable&lt;V&gt; callable, long delay, TimeUnit unit);
+public ScheduledFuture&lt;?&gt; scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit);
+public ScheduledFuture&lt;?&gt; scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit);</code></pre><p>从上面的抽象方法可以看到，第一个参数是 Runnable 接口或 Callable 接口，这里就是写任务逻辑的，后面的 delay 也和之前的意思一样，延迟多少时间才开始执行这个定时任务，unit 主要是指定 long 参数的时间单位。period 也是一样的意思，间隔多少秒（周期）才执行下一次的任务。</p><blockquote>ExecutorService 接口表述了异步执行的机制，并且可以让任务在后台执行。ExecutorService 接口的实现类有我们知道的 <code>ThreadPoolExecutor</code> （不知道的话，现在就知道啦）。</blockquote><h4>基本使用</h4><p><strong>那我们如何获取 <code>ScheduledExecutorService</code> 的实现类？如何使用它实现定时任务？</strong></p><p>可以通过 <code>Executors.newSingleThreadScheduledExecutor()</code> 获取其实现类，然后调用 schedule() 方法实现定时任务。</p><p>现在先看一下，如何使用：</p><pre><code class="java">@Slf4j
+public class ScheduledExecutorServiceDemo {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        testScheduledExecutorService();
+    }
+
+    public static void testScheduledExecutorService() throws ExecutionException, InterruptedException {
+        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        log.info(&quot;2秒后开始执行任务，此刻时间---{}&quot;, LocalDateTime.now());
+        ScheduledFuture&lt;?&gt; future = scheduledExecutorService.schedule(() -&gt; {
+            log.info(&quot;任务开始---{}&quot;, LocalDateTime.now());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            log.info(&quot;任务结束---{}&quot;, LocalDateTime.now());
+            return &quot;ok&quot;;
+        }, 2000, TimeUnit.MILLISECONDS); // 延迟 2 秒后执行
+        log.info(&quot;任务执行后 future {}, 时间 {}&quot;, future.get(), LocalDateTime.now());
+    }
+}</code></pre><p>控制台输出：</p><pre><code class="bash">14:15:44.510 [main] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 2秒后开始执行任务，此刻时间---2022-10-25T14:15:44.509
+14:15:46.524 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:15:46.524
+14:15:48.537 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:15:48.537
+14:15:48.538 [main] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务执行后 future ok, 时间 2022-10-25T14:15:48.538</code></pre><p>很明显，这里不是一个定时任务，因为只执行了一次就结束了，所以我们需要调用两外两个来实现，分别是 <code>scheduleAtFixedRate()</code> 方法和 <code>scheduleWithFixedDelay()</code> 方法。</p><h4>固定频率触发定时任务</h4><p>scheduleAtFixedRate() 方法，可以固定多久就触发一次任务。下面我们写一个延迟 2 秒后开始执行任务，经过 5 秒后再执行下一次的任务的代码：</p><pre><code class="java">@Slf4j
+public class ScheduledExecutorServiceDemo {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        testFixedRate();
+    }
+
+    public static void testFixedRate() {
+        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        log.info(&quot;2秒后开始执行任务，此刻时间---{}&quot;, LocalDateTime.now());
+        // 固定频率（每隔5秒）开始执行一个任务
+        scheduledExecutorService.scheduleAtFixedRate(() -&gt; {
+            log.info(&quot;任务开始---{}&quot;, LocalDateTime.now());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            log.info(&quot;任务结束---{}&quot;, LocalDateTime.now());
+        }, 2000, 5000, TimeUnit.MILLISECONDS);
+    }
+}</code></pre><p>通过 <code>Thread.sleep(2000)</code> 模拟任务执行了 2 秒的时间，控制台输出如下：</p><pre><code class="bash">14:17:15.081 [main] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 2秒后开始执行任务，此刻时间---2022-10-25T14:17:15.079
+14:17:17.094 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:17:17.094
+14:17:19.109 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:17:19.109
+14:17:22.094 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:17:22.094
+14:17:24.106 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:17:24.106
+14:17:27.090 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:17:27.090
+14:17:29.099 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:17:29.099</code></pre><p>可以看到，第一次执行的时间是 <code>14:17:17</code> ，即第 17 秒，下一次执行的时间是 <code>14:17:22</code> ，即第 22 秒，这个过程经过了 5 秒钟，这就是 scheduleAtFixedRate() 方法的效果。</p><h4>固定延迟触发定时任务</h4><p>scheduleWithFixedDelay() 方法，可以固定任务完成后延迟多久才执行下一次任务。下面我们写一个延迟 1 秒后开始执行定时任务，当任务完成后，延迟 4 秒再执行下一次任务。代码如下：</p><pre><code class="java">@Slf4j
+public class ScheduledExecutorServiceDemo {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        testFixedDelay();
+    }
+
+    public static void testFixedDelay() {
+        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        log.info(&quot;1秒后开始执行任务，此刻时间---{}&quot;, LocalDateTime.now());
+        // 任务完成后间隔4秒开始执行下一次任务
+        scheduledExecutorService.scheduleWithFixedDelay(() -&gt; {
+            log.info(&quot;任务开始---{}&quot;, LocalDateTime.now());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            log.info(&quot;任务结束---{}&quot;, LocalDateTime.now());
+        }, 1000, 4000, TimeUnit.MILLISECONDS);
+    }
+}</code></pre><p>通过 <code>Thread.sleep(2000)</code> 模拟任务执行了 2 秒的时间，控制台输出如下：</p><pre><code class="bash">14:20:31.352 [main] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 1秒后开始执行任务，此刻时间---2022-10-25T14:20:31.351
+14:20:32.370 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:20:32.370
+14:20:34.371 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:20:34.371
+14:20:38.379 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务开始---2022-10-25T14:20:38.379
+14:20:40.381 [pool-1-thread-1] INFO cn.god23bin.demo.timer.ScheduledExecutorServiceDemo - 任务结束---2022-10-25T14:20:40.381</code></pre><p>可以看到，第一次任务结束的时间是 <code>14:20:34</code> ，即第 34 秒，下一次执行的时间是 <code>14:17:38</code> ，即第 38 秒，这个过程经过了 4 秒钟，这就是 scheduleWithFixedDelay() 方法的效果。</p><p>以上就是 ScheduledExecutorService 实现的定时任务，接下来看看 Spring 提供的。</p><h3>Spring 提供的定时任务</h3><p>Spring 提供了 <code>@EnableScheduling</code> 和 <code>@Scheduled</code> 这两个注解来实现定时任务。</p><p>我们可以编写一个类，加上 <code>@Component</code> 让 Spring 来管理这个 Bean（当然，也可以用 @Configuration 注解），加上 <code>@EnableScheduling</code> 表明该 Bean 具有可开启定时任务的功能。</p><p>在这个普通的类中编写方法，你可以让你写的方法成为一个定时任务，只需在方法上加上 <code>@Scheduled</code> 注解就可以了，就是这么简单！</p><p>还有一个就是 <strong>cron 表达式</strong> 需要学习，这个表达式可以表明这个方法<strong>何时执行</strong>。</p><p>下面是一个简单的定时任务：</p><pre><code class="java">@Slf4j
+@Component
+@EnableScheduling
+public class TaskDemo {
+
+    @Scheduled(cron = &quot;*/1 * * * * ?&quot;)
+    public void printTime() throws InterruptedException {
+        log.info(&quot;此刻时间 {}&quot;, LocalDateTime.now());
+    }
+    
+}</code></pre><p>cron 表达式有 6 位，是必须的，从左到右分别表示：<code>秒、分、时、日、月、周</code>。</p><p>当然也有可能是 7 位，那么最后一位就是年（一般省略不写）：<code>秒、分、时、日、月、周、年</code>。</p><p>取值说明：正常认识，<strong>秒分</strong>都是 0 - 59，<strong>时</strong>则是 0 - 23，<strong>日</strong>则是 1 - 31，<strong>月</strong>则是 1-12，<strong>周</strong>则是 1 - 7。<strong>年</strong>则只有 1970 - 2099</p><p>每一位都可以用数字表示，当然还可以用一些特殊字符表示，比如上面出现的 <code>*/1 * * * * ?</code> ，第 1 位的 <code>*/1</code> 表示任意秒每隔1秒，第 2 位的 <code>*</code> 表示任意分钟，以此类推。</p><blockquote><p>详细可参考这里：<a href="https://link.segmentfault.com/?enc=%2B7jgMAIPKSu0qwkRAp9fbA%3D%3D.2Evudlvm8p2q61TZhmCKu13ygkYU4o8L30X%2FGVrnyCejvhuc7AYVvZWNpQBCaUtH" rel="nofollow">简书-Cron表达式的详细用法</a></p><p>Cron 生成工具：<a href="https://link.segmentfault.com/?enc=MgGt%2BLwUR%2B7UC2RyrfrgsQ%3D%3D.NKzushRDRRw8GK2tfBOgmoYdpsnEXcs5IIUbsm8vCKI%3D" rel="nofollow">https://cron.qqe2.com/</a></p></blockquote><p>上面的代码运行之后，控制台输出：</p><pre><code class="bash">2022-10-25 14:26:22.013  INFO 18304 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 此刻时间 2022-10-25T14:26:22.013
+2022-10-25 14:26:23.010  INFO 18304 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 此刻时间 2022-10-25T14:26:23.010
+2022-10-25 14:26:24.011  INFO 18304 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 此刻时间 2022-10-25T14:26:24.011
+2022-10-25 14:26:25.011  INFO 18304 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 此刻时间 2022-10-25T14:26:25.011</code></pre><p>可以看到，确实是每隔 1 秒执行一次 <code>printTime()</code> 这个定时任务。</p><h4>@Scheduled 的另外两个属性</h4><p><code>@Scheduled</code> 注解除了 <code>cron</code> 这个属性外，还有 <code>fixedRate</code> 属性和 <code>fixedDelay</code> 属性，同理，就是<strong>固定频率触发定时任务</strong>和<strong>固定延迟触发定时任务</strong></p><h5>fixedRate</h5><pre><code class="java">@Slf4j
+@Component
+@EnableScheduling
+public class TaskDemo {
+
+    /**
+     * 当前任务执行到下一个任务开始的时间（固定频率开始执行一个任务，每5秒执行），都是单线程处理的
+     **/
+    @Scheduled(fixedRate = 5000)
+    public void printTime1() throws InterruptedException {
+        log.info(&quot;任务开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(1000);
+        log.info(&quot;任务完成------- {}&quot;, LocalDateTime.now());
+    }
+    
+}</code></pre><p>控制台输出：</p><pre><code class="bash">2022-10-25 14:54:04.824  INFO 23520 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:54:04.824
+2022-10-25 14:54:05.833  INFO 23520 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:54:05.833
+2022-10-25 14:54:09.834  INFO 23520 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:54:09.834
+2022-10-25 14:54:10.843  INFO 23520 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:54:10.843</code></pre><p>当然，如果任务的处理逻辑超过了固定的频率时间，比如我们修改下 <code>Thread.sleep(1000)</code> ，模拟成 6 秒，即 <code>Thread.sleep(6000)</code>，那么输出如下：</p><pre><code class="bash">2022-10-25 14:57:04.212  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:57:04.212
+2022-10-25 14:57:10.227  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:57:10.227
+2022-10-25 14:57:10.227  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:57:10.227
+2022-10-25 14:57:16.241  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:57:16.241
+2022-10-25 14:57:16.242  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:57:16.242
+2022-10-25 14:57:22.243  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:57:22.243
+2022-10-25 14:57:22.243  INFO 9324 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:57:22.243</code></pre><p>可以发现，当前任务一完成就会立刻执行下一次任务，这就是当任务的处理逻辑超过了固定的频率时间会出现的情况。</p><h5>fixedDelay</h5><pre><code class="java">@Slf4j
+@Component
+@EnableScheduling
+public class TaskDemo {
+
+    /**
+     * 执行完成后间隔2秒执行下一次
+     **/
+    @Scheduled(fixedDelay = 2000)
+    public void printTime2() throws InterruptedException {
+        log.info(&quot;任务开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(4000);
+        log.info(&quot;任务完成------- {}&quot;, LocalDateTime.now());
+    }
+    
+}</code></pre><p>控制台输出：</p><pre><code class="java">2022-10-25 14:55:50.973  INFO 22128 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:55:50.973
+2022-10-25 14:55:54.977  INFO 22128 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:55:54.977
+2022-10-25 14:55:56.987  INFO 22128 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:55:56.987
+2022-10-25 14:56:01.001  INFO 22128 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务完成------- 2022-10-25T14:56:01.001
+2022-10-25 14:56:03.012  INFO 22128 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务开始------- 2022-10-25T14:56:03.012</code></pre><h4>多个定时任务的执行</h4><h5>同步</h5><p>如果我们写多个定时任务，那么它们只会同步执行，如下：</p><pre><code class="java">@Slf4j
+@Component
+@EnableScheduling
+public class TaskDemo {
+
+    @Scheduled(fixedRate = 2000)
+    public void printTime3() throws InterruptedException {
+        log.info(&quot;任务A开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(2000);
+        log.info(&quot;任务A完成------- {}&quot;, LocalDateTime.now());
+    }
+
+    @Scheduled(fixedDelay = 2000)
+    public void printTime4() throws InterruptedException {
+        log.info(&quot;任务B开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(2000);
+        log.info(&quot;任务B完成------- {}&quot;, LocalDateTime.now());
+    }
+    
+}</code></pre><p>控制台输出：</p><pre><code class="java">2022-10-25 14:59:14.279  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T14:59:14.279
+2022-10-25 14:59:16.283  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T14:59:16.283
+2022-10-25 14:59:16.283  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务B开始------- 2022-10-25T14:59:16.283
+2022-10-25 14:59:18.288  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务B完成------- 2022-10-25T14:59:18.288
+2022-10-25 14:59:18.288  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T14:59:18.288
+2022-10-25 14:59:20.301  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T14:59:20.301
+2022-10-25 14:59:20.301  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T14:59:20.301
+2022-10-25 14:59:22.307  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T14:59:22.307
+2022-10-25 14:59:22.307  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T14:59:22.307
+2022-10-25 14:59:24.323  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T14:59:24.323
+2022-10-25 14:59:24.323  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务B开始------- 2022-10-25T14:59:24.323
+2022-10-25 14:59:26.337  INFO 21588 --- [   scheduling-1] cn.god23bin.demo.task.TaskDemo           : 任务B完成------- 2022-10-25T14:59:26.337</code></pre><p>可以看到，只有某一个任务完成后，下一个任务才会执行。</p><p><strong>如果想要异步，如何异步呢？</strong></p><h5>异步</h5><p>很简单，使用 <code>@EnableAsync</code> 和 <code>@Async</code> 这两个注解就可以了，如下：</p><pre><code class="java">@Slf4j
+@Component
+@EnableScheduling
+@EnableAsync
+public class TaskDemo {
+
+    @Async
+    @Scheduled(fixedRate = 2000)
+    public void printTime3() throws InterruptedException {
+        log.info(&quot;任务A开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(2000);
+        log.info(&quot;任务A完成------- {}&quot;, LocalDateTime.now());
+    }
+
+    @Async
+    @Scheduled(fixedDelay = 2000)
+    public void printTime4() throws InterruptedException {
+        log.info(&quot;任务B开始------- {}&quot;, LocalDateTime.now());
+        Thread.sleep(2000);
+        log.info(&quot;任务B完成------- {}&quot;, LocalDateTime.now());
+    }
+    
+}</code></pre><p>控制台输出：</p><pre><code class="java">2022-10-25 15:04:05.833  INFO 15604 --- [         task-1] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T15:04:05.833
+2022-10-25 15:04:05.833  INFO 15604 --- [         task-2] cn.god23bin.demo.task.TaskDemo           : 任务B开始------- 2022-10-25T15:04:05.833
+2022-10-25 15:04:07.833  INFO 15604 --- [         task-4] cn.god23bin.demo.task.TaskDemo           : 任务B开始------- 2022-10-25T15:04:07.833
+2022-10-25 15:04:07.833  INFO 15604 --- [         task-3] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T15:04:07.833
+2022-10-25 15:04:07.848  INFO 15604 --- [         task-2] cn.god23bin.demo.task.TaskDemo           : 任务B完成------- 2022-10-25T15:04:07.848
+2022-10-25 15:04:07.848  INFO 15604 --- [         task-1] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T15:04:07.848
+2022-10-25 15:04:09.833  INFO 15604 --- [         task-5] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T15:04:09.833
+2022-10-25 15:04:09.843  INFO 15604 --- [         task-4] cn.god23bin.demo.task.TaskDemo           : 任务B完成------- 2022-10-25T15:04:09.843
+2022-10-25 15:04:09.843  INFO 15604 --- [         task-3] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T15:04:09.843
+2022-10-25 15:04:09.844  INFO 15604 --- [         task-6] cn.god23bin.demo.task.TaskDemo           : 任务B开始------- 2022-10-25T15:04:09.843
+2022-10-25 15:04:11.830  INFO 15604 --- [         task-7] cn.god23bin.demo.task.TaskDemo           : 任务A开始------- 2022-10-25T15:04:11.830
+2022-10-25 15:04:11.845  INFO 15604 --- [         task-6] cn.god23bin.demo.task.TaskDemo           : 任务B完成------- 2022-10-25T15:04:11.845
+2022-10-25 15:04:11.845  INFO 15604 --- [         task-5] cn.god23bin.demo.task.TaskDemo           : 任务A完成------- 2022-10-25T15:04:11.845</code></pre><h2>总结</h2><p>首先讲了下定时任务是什么？接着讲了有哪些实现方式？对这些方式进行介绍。</p><p>主要的定时任务可以通过以下的方式实现：</p><ol><li>纯手写单线程死循环，配合线程的等待机制的方式（不推荐，麻烦，问题多多）</li><li>使用 JDK 提供的 Timer 配合 TimerTask 的方式（不推荐，单线程）</li><li>使用 JDK 提供的多线程的 ScheduledExecutorService 的方式（可代替 Timer，多线程的）</li><li>使用 Spring 提供的定时任务的方式（推荐，更加方便，可异步）</li></ol><p>当然，除了这些方式，还可以使用定时任务框架，比如 Quartz、XXL-JOB、Elastic-Job 等等。</p><h2>最后的最后</h2><p><strong>由本人水平所限，难免有错误以及不足之处， <code>屏幕前的靓仔靓女们</code> 如有发现，恳请指出！</strong></p><p><strong>最后，谢谢你看到这里，谢谢你认真对待我的努力，希望这篇博客对你有所帮助！</strong></p><p><strong>你轻轻地点了个赞，那将在我的心里世界增添一颗明亮而耀眼的星！</strong></p></article><div class="d-flex flex-wrap align-items-center "><div class="m-n1 d-flex flex-wrap align-items-center"><a href="/t/%E5%90%8E%E7%AB%AF" class="m-1 badge-tag  ">后端</a><a href="/t/java" class="m-1 badge-tag  "><img src="https://avatar-static.segmentfault.com/868/271/868271510-54cb382abb7a1_small" alt="" width="16" height="16" class="me-1"/>java</a><a href="/t/spring" class="m-1 badge-tag  ">spring</a></div></div><div class="my-4"><div id="OA_holder_3" class="ad-container" style="display:block"></div></div><div class="text-secondary font-size-14 mt-3 mb-5 d-flex flex-wrap justify-content-between"><div><span>阅读 <!-- -->479</span><span class="split-dot"></span><time dateTime="2022-10-27T11:55:19.000Z" itemProp="datePublished">发布于 <!-- -->10 月 27 日</time></div><div class="operation text-end"><div></div></div></div><div class="functional-area-bottom text-center"><div role="group" class="btn-group like-group align-items-center btn-group"><button type="button" class="btn me-2 rounded btn btn-outline-primary"><i class="far fa-thumbs-up"></i><span class="ms-1">赞</span><span class="mainLikeNum ms-1">1</span></button><button type="button" class="btn me-2 rounded btn btn-outline-secondary"><i class="far fa-bookmark"></i><span class="ms-1">收藏</span><span class="ms-1">1</span></button><div class="bottom-share-wrap dropdown"><a href="###" class="nav-tab-item btn d-flex justify-content-center align-items-center dropdown-toggle"><button type="button" class="btn rounded btn btn-outline-secondary"><i class="far fa-share-nodes"></i><span class="ms-1">分享</span></button></a></div></div></div><canvas hidden="" class="qrcode"></canvas><div class="font-size-14 text-secondary text-center mt-3 mb-5"><span>本作品系原创，</span><a target="_blank" class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">采用《署名-非商业性使用-禁止演绎 4.0 国际》许可协议</a></div></div></div><div class="d-block d-xl-none my-4"><div class="card"><div class="card-body"><div class="d-flex align-items-center mb-3"><picture class="me-3 " style="width:64px;height:72px"><a href="/u/god23bin"><img class="rounded-circle " width="64" height="64" src="https://avatar-static.segmentfault.com/104/271/1042717788-607aa9598cd2e_huge128" alt="avatar" style="margin-top:12px;margin-left:4px"/></a></picture><div><h5 class="mb-0"><a href="/u/god23bin" class="text-body">god23bin</a></h5></div></div><div class="d-flex align-items-center mb-3"><div class="me-4"><strong>4</strong><span class="text-secondary"> 声望</span></div><div><strong>1</strong><span class="text-secondary"> 粉丝</span></div></div><div class="d-grid"><button type="button" class="btn btn-primary">关注作者</button></div></div></div></div><div><div id="comment-area" class="comment-wrap  card"><div class="d-flex align-items-center justify-content-between bg-transparent card-header"><strong>0<!-- --> 条评论</strong><div aria-label="Basic" role="group" class="btn-group"><a href="/a/1190000042702969?sort=votes" role="button" tabindex="0" class="btn btn-secondary btn-sm">得票</a><a href="/a/1190000042702969?sort=newest" role="button" tabindex="0" class="btn btn-outline-secondary btn-sm">最新</a></div></div><div class="card-body"><div class="mb-4 media" tabindex="1"><img class="rounded-circle me-3" width="38" height="38" src="https://image-static.segmentfault.com/317/931/3179314346-5f61e47221e07" alt="头像" aria-hidden="true"/><div class="media-body"><div class="mb-3"><div class="mentions-wrap dropdown"><textarea rows="1" placeholder="撰写评论 …" aria-label="评论" class="comment-text form-control"></textarea><div class="dropdown-toggle"></div></div><div class="invalid-feedback"></div></div><div class="d-flex justify-content-end align-items-center"><a href="###" class="me-3" aria-label="提示" tabindex="-1"><i class="far fa-circle-info text-secondary"></i></a><a href="###" class="me-3" aria-label="提示" tabindex="-1"><i class="far fa-face-laugh text-secondary"></i></a><button disabled="" type="button" class="float-end btn btn-primary">提交评论</button></div><div role="alert" class="fade mt-3 my-0 font-size-14 alert alert-info show">评论支持部分 Markdown 语法：<code>**粗体** _斜体_ [链接](http://example.com) `代码` - 列表 &gt; 引用</code>。你还可以使用 <code>@ </code>来通知其他用户。</div></div></div><div class="comment-body-wrap d-none"></div></div></div></div></div><div class="col-xl-auto w-xl-300 d-none d-xl-block p-0 right-side col-12"><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:5"><div class="right-block" id="author"><div class="card"><div class="card-body"><div class="d-flex align-items-center mb-3"><picture class="me-3 " style="width:64px;height:72px"><a href="/u/god23bin"><img class="rounded-circle " width="64" height="64" src="https://avatar-static.segmentfault.com/104/271/1042717788-607aa9598cd2e_huge128" alt="avatar" style="margin-top:12px;margin-left:4px"/></a></picture><div><h5 class="mb-0"><a href="/u/god23bin" class="text-body">god23bin</a></h5></div></div><div class="d-flex align-items-center mb-3"><div class="me-4"><strong>4</strong><span class="text-secondary"> 声望</span></div><div><strong>1</strong><span class="text-secondary"> 粉丝</span></div></div><div class="d-grid"><button type="button" class="btn btn-primary">关注作者</button></div></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:4"><div class="right-block" id="first-ad"><div class="card border-0 overflow-hidden d-none d-xl-flex justify-content-center align-items-center float-ads"><div id="OA_holder_1" class="ad-container" style="display:block"></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:3"><div id="cataLog" class="right-block"><div data-article-nav="true" id="articleNavCard" class="overflow-hidden d-none d-xl-flex card"><div class="d-flex justify-content-between align-items-center  bg-white  card-header"><strong class="nav-header p-0">文章目录</strong><div class="mb-0 form-check form-switch"><input type="checkbox" id="follow-switch" class="form-check-input"/><label title="" for="follow-switch" class="form-check-label">跟随</label></div></div><div class="p-0 py-2 card-body" id="collapseTarget"><nav id="article-nav-list" class="list-group list-group-flush d-flex flex-column font-size-14" data-article-nav-list="true"></nav></div></div></div></div></div><div id="gridAd" class="right-block"><div class="card"><div class="bg-white border-0 card-header"><strong>宣传栏</strong></div><div class="card-body"><div class="mb-3"><div id="OA_holder_7" class="ad-container" style="display:block"></div></div><div class="mb-3"><div id="OA_holder_9" class="ad-container" style="display:block"></div></div><div><div id="OA_holder_10" class="ad-container" style="display:block"></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:2"><div id="second-ad"><div id="OA_holder_31" class="ad-container" style="display:block"></div></div></div></div></div></div><div id="fixedTools" class="position-fixed d-none " style="right:24px;bottom:24px"><button type="button" class="btn btn-light" title="回顶部">▲</button></div><div class="d-block d-sm-none fix-bottom-action-wrap"><div class="w-100 fixed-bottom-action d-flex align-items-center "><a class="text-center text-body w-25"><i class="far fa-thumbs-up"></i><span class="mainLikeNum ms-1">1</span></a><a class="text-center text-body w-25"><i class="far fa-bookmark"></i><span class="mainLikeNum ms-1">1</span></a><a class="text-center text-body w-25" href="#comment-area"><i class="far fa-message-lines"></i></a><div class="bottom-share-wrap w-25 text-center  dropdown"><a class="dropdown-toggle" id="share-bottom-toggle" aria-expanded="false"><i class="far fa-share-nodes text-body"></i></a></div></div><canvas hidden="" class="qrcode"></canvas></div></div><footer id="footer" class="d-none d-sm-block bg-white py-5 font-size-14 border-top"><div class="container"><div class="row"><dl class="col-4 col-md-2"><dt class="h6">产品</dt><dd class="my-1"><a class="text-secondary" href="/questions/hottest?utm_source=sf-footer" target="_blank">热门问答</a></dd><dd class="my-1"><a class="text-secondary" href="/blogs/hottest?utm_source=sf-footer" target="_blank">热门专栏</a></dd><dd class="my-1"><a class="text-secondary" href="/lives?utm_source=sf-footer" target="_blank">热门课程</a></dd><dd class="my-1"><a class="text-secondary" href="/events?utm_source=sf-footer" target="_blank">最新活动</a></dd><dd class="my-1"><a class="text-secondary" href="/site/stackoverflow?utm_source=sf-footer" target="_blank">翻译</a></dd><dd class="my-1"><a class="text-secondary" href="/jobs?utm_source=sf-footer" target="_blank">酷工作</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">课程</dt><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=java&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Java 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=php&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">PHP 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=python&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Python 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?category=1&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">前端开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/study?category=3&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">移动开发课程</a></dd></dl><dl class="col-4 col-md-2 "><dt class="h6">资源</dt><dd class="my-1"><a class="text-secondary" href="/weekly?utm_source=sf-footer" target="_blank">每周精选</a></dd><dd class="my-1"><a class="text-secondary" href="/users?utm_source=sf-footer" target="_blank">用户排行榜</a></dd><dd class="my-1"><a class="text-secondary" href="/help?utm_source=sf-footer" target="_blank">帮助中心</a></dd><dd class="my-1"><a class="text-secondary" href="/0x?utm_source=sf-footer" target="_blank">建议反馈</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">合作</dt><dd class="my-1"><a class="text-secondary" href="https://about.segmentfault.com/?utm_source=sf-footer" target="_blank">关于我们</a></dd><dd class="my-1"><a class="text-secondary" href="https://business.segmentfault.com/ads?utm_source=sf-footer" target="_blank">广告投放</a></dd><dd class="my-1"><a class="text-secondary" href="/jobs?utm_source=sf-footer" target="_blank">职位发布</a></dd><dd class="my-1"><a class="text-secondary" href="https://jinshuju.net/f/HK5r9K?utm_source=sf-footer" target="_blank">讲师招募</a></dd><dd class="my-1"><a class="text-secondary" href="/cdn-cgi/l/email-protection#0c7c7e4c7f696b616962786a6d796078226f636133797861537f63797e6f69317f6a216a636378697e" target="_blank">联系我们</a></dd><dd class="my-1"><a class="text-secondary" href="/link?utm_source=sf-footer" target="_blank">合作伙伴</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">关注</dt><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault?utm_source=sf-footer" target="_blank">产品技术日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/community_admin?utm_source=sf-footer" target="_blank">社区运营日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault_news?utm_source=sf-footer" target="_blank">市场运营日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault_team?utm_source=sf-footer" target="_blank">团队日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/interview?utm_source=sf-footer" target="_blank">社区访谈</a></dd></dl><dl class="col-4 col-md-2" id="license"><dt class="h6">条款</dt><dd class="my-1"><a class="text-secondary" href="/tos?utm_source=sf-footer" target="_blank">服务协议</a></dd><dd class="my-1"><a class="text-secondary" href="/privacy?utm_source=sf-footer" target="_blank">隐私政策</a></dd><dd class="my-1"><a class="text-secondary" href="/app?utm_source=sf-footer">下载 App</a></dd><dd class="my-1"><div class="weixin-qrcode ms-n1" title="微信公众号"></div></dd></dl></div><hr class="mt-2 mb-4"/><div class="row"><div class="col-md-8"><div class="text-secondary"><p class="mb-1">Copyright © 2011-<!-- -->2022<!-- --> SegmentFault. 当前呈现版本 <!-- -->22.10.28</p><p class="mb-1"><a class="text-secondary me-2" target="_blank" href="http://beian.miit.gov.cn" rel="nofollow noreferrer">浙ICP备15005796号-2</a><a class="text-secondary me-2" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002000" rel="nofollow noreferrer">浙公网安备33010602002000号</a><span class="text-secondary">ICP 经营许可 浙B2-20201554</span></p><p class="mb-0">杭州堆栈科技有限公司版权所有</p></div></div><div class="col-md-4 text-end"><div class="shareContent"><a class="share_weixin" data-share="weixin" href="#javascript" aria-label="微信"><i class="fab fa-weixin"></i></a><a class="share_weibo" data-share="weibo" href="http://weibo.com/segmentfault" target="_blank" aria-label="微博"><i class="fab fa-weibo"></i></a><a class="share_github" data-share="github" href="https://github.com/SegmentFault" target="_blank" aria-label="github"><i class="fab fa-github"></i></a><a class="share_twitter me-0" data-share="twitter" href="https://twitter.com/segment_fault" target="_blank" aria-label="twitter"><i class="fab fa-twitter"></i></a></div></div></div></div></footer></div>
+	
+	<!--
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	
+	<script>
+  window.g_useSSR = true;
+  window.g_initialProps = {"router":{"location":{"pathname":"\u002Fa\u002F1190000042702969","search":"","hash":"","query":{},"state":undefined,"key":"arvn9g"},"action":"POP"},"@@dva":0,"action":{"1190000042702969":{"votes":1,"isLiked":false,"isHated":undefined,"bookmarks":1,"isBookmarked":false}},"sfApp":{"comment":{"isFetchComments":false,"isShowComment":false}},"article":{"articles":{"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false,"query":""},"currentTab":""},"articleDetail":{"artDetail":{"1190000042702969":{"title":"java - 我终于会写 Java 的定时任务了！_个人文章","keywords":"后端,java,spring","description":"前言学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：你写一个定时任务就好了。写个定时任务让他去爬取就行了。我不会，所以现在得补回来了，...","article":{"id":1190000042702969,"title":"我终于会写 Java 的定时任务了！","cover":"\u002Fimg\u002FbVc3k9I?spec=cover","tags_list":"1040000000391379,1040000000089449,1040000000090103","user_id":1030000039841912,"blog_id":0,"excerpt":"前言学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：你写一个定时任务就好了。写个定时任务让他去爬取就行了。我不会，所以现在得补回来了，...","parsed_text":"","is_bookmarked":false,"is_liked":false,"created":1666871719,"modified":1666871719,"real_views":479,"real_unique_views":470,"votes":1,"bookmarks":1,"status":2,"origin_url":"","article_type":1,"license":"1","langs":[],"comments":0,"is_edited":false,"ip_address":"广东","tags":[{"id":1040000000391379,"url":"\u002Ft\u002F%E5%90%8E%E7%AB%AF","name":"后端","icon_url":""},{"id":1040000000089449,"url":"\u002Ft\u002Fjava","name":"java","icon_url":"https:\u002F\u002Favatar-static.segmentfault.com\u002F868\u002F271\u002F868271510-54cb382abb7a1_small"},{"id":1040000000090103,"url":"\u002Ft\u002Fspring","name":"spring","icon_url":""}],"user":{"id":1030000039841912,"name":"god23bin","avatar_url":"https:\u002F\u002Favatar-static.segmentfault.com\u002F104\u002F271\u002F1042717788-607aa9598cd2e_huge128","url":"\u002Fu\u002Fgod23bin","rank":4,"rank_word":"4","is_followed":false,"excerpt":null,"followers":1,"articles":10,"user_auth":null,"had_cat":0},"status_key":"recommend"},"blog":null,"actions":[],"member_actions":[],"article_types":{"1":"原创","2":"转载","3":"翻译"},"pay_info":null,"extra":{"reason":null,"operator":null,"operator_time":null},"tag":{"name":"java","url":"\u002Ft\u002Fjava","icon_url":"https:\u002F\u002Favatar-static.segmentfault.com\u002F868\u002F271\u002F868271510-54cb382abb7a1_small"},"isServerLoaded":true}},"alertMsg":{"showAlert":false,"msg":""},"articleRelated":[],"quotedData":{"rows":[],"page":1,"size":5,"total_page":0,"total":0}},"editor":{"markdownContent":"","title":{"value":"","isInvalid":false,"errorMsg":""},"log":{"value":"","isInvalid":false,"errorMsg":""},"tags":{"value":[],"isInvalid":false,"errorMsg":""},"draftInfo":{"id":"","status":""},"isFull":false,"initTags":[],"detail":{}},"global":{"sessionUser":null,"isHiddenHeader":false,"isHiddenFooter":false,"title":"java - 我终于会写 Java 的定时任务了！_个人文章 - SegmentFault 思否","titleAlias":"我终于会写 Java 的定时任务了！ - SegmentFault 思否","isShowLogin":false,"beginnerGuideState":{"visible":false,"type":1},"isShowBindMobile":false,"authChannel":"","unactivated":false,"isShowRegister":false,"headOptions":{"keywords":"后端,java,spring","description":"前言学过定时任务，但是我忘了，忘得一干二净，害怕，一直听别人说：你写一个定时任务就好了。写个定时任务让他去爬取就行了。我不会，所以现在得补回来了，..."},"notices":[],"sessionInfo":{"key":"b4d41f341cfc58c7ef5a4bea2dd1da85","login":false,"id":null},"singleNotice":"","currentRoute":{"customLayout":false,"headerType":undefined,"platform":undefined,"eggCtx":{"request":{"method":"GET","url":"\u002Fa\u002F1190000042702969","header":{"host":"segmentfault.com","x-https-cn":"yes","x-ddos":"yes","connection":"close","accept-encoding":"gzip","x-forwarded-for":"39.149.31.238","cf-ray":"76210d469f963336-CGO","x-forwarded-proto":"https","cf-visitor":"{\"scheme\":\"https\"}","user-agent":"Mozilla\u002F5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko\u002F20100101 Firefox\u002F106.0","accept":"text\u002Fhtml,application\u002Fxhtml+xml,application\u002Fxml;q=0.9,image\u002Favif,image\u002Fwebp,*\u002F*;q=0.8","accept-language":"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2","referer":"https:\u002F\u002Fsegmentfault.com\u002Fblogs","upgrade-insecure-requests":"1","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","cookie":"Hm_lvt_e23800c454aa573c0ccb16b52665ac26=1666698124,1666766861,1666939266,1667100404; _ga_MJYFRXB3ZX=GS1.1.1667100404.7.1.1667100410.0.0.0; _ga=GA1.1.1005866425.1666049698; PHPSESSID=b4d41f341cfc58c7ef5a4bea2dd1da85; csrfToken=a444HGt9tGgaKKVeXDLdrvNE; Hm_lpvt_e23800c454aa573c0ccb16b52665ac26=1667100410","cf-connecting-ip":"39.149.31.238","cf-ipcountry":"CN","cdn-loop":"cloudflare"}},"response":{"status":404,"message":"Not Found","header":{"set-cookie":["PHPSESSID=b4d41f341cfc58c7ef5a4bea2dd1da85; path=\u002F; max-age=604800; expires=Sun, 06 Nov 2022 03:26:51 GMT; domain=.segmentfault.com"]}},"app":{"env":"prod","name":"server","baseDir":"\u002Fusr\u002Fsrc\u002Fapp","subdomainOffset":2,"config":"\u003Cegg config\u003E","controller":"\u003Cegg controller\u003E","httpclient":"\u003Cegg httpclient\u003E","loggers":"\u003Cegg loggers\u003E","middlewares":"\u003Cegg middlewares\u003E","router":"\u003Cegg router\u003E","serviceClasses":"\u003Cegg serviceClasses\u003E"},"originalUrl":"\u002Fa\u002F1190000042702969","req":"\u003Coriginal node req\u003E","res":"\u003Coriginal node res\u003E","socket":"\u003Coriginal node socket\u003E"}},"letterNum":0,"noticeNum":0,"serverData":{"userAgent":"Mozilla\u002F5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko\u002F20100101 Firefox\u002F106.0","Token":"b4d41f341cfc58c7ef5a4bea2dd1da85","X-Forwarded-For":"39.149.31.238"},"userStat":{},"newTask":{},"followedTags":[],"globalCss":"","baiduOxAppState":{"isShow":false,"copyUrl":""},"pageUsers":{},"wxShareCover":"","isBaiduOxApp":false,"showProductAuthModal":{"isShow":false,"title":""},"routeInterceptor":{"path":""},"safeCheckModal":{"isShow":false,"pageSource":""},"followSFState":{"isShow":false},"catModalState":{"isShow":false},"addressModalState":{"isShow":false}},"video":{"videoData":{},"relationVideos":[],"videos":{"rows":[],"limit":0,"offset":0,"hasMore":true},"lives":[]},"activity":{"recommendList":[],"newestList":[],"finishedList":{},"eventType":[],"cityList":[]},"activityDetail":{"detailData":{}},"badges":{"listData":{},"detail":{},"records":{"page":1,"rows":[]},"loading":false},"blogHome":{"loading":false,"blogDetail":{},"articleData":{}},"blogs":{"channels":{},"articles":{"mode":"scrollLoad","page":1,"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false},"currentTab":"recommendation","notices":{},"events":{},"recommendArticles":{},"hotQuestions":{},"hotTestData":{},"banners":{},"showOneLoading":false},"bookmark":{"loading":false,"detailInfo":{},"listInfo":{"page":1,"total_page":0,"rows":[]}},"deactivate":{"checkResult":{}},"dianping":{"homeInfo":{},"categroies":[],"categoryList":[],"categoryInfo":{},"loading":false,"companyInfo":{}},"dpDetail":{"dpDetail":{},"dpList":{"page":1,"total_page":10,"rows":[]},"usedsAndWishs":{"useds":0,"wisheds":0},"currentTab":"votes"},"draft":{"listData":{"rows":[],"hasMore":false,"page":1},"inviteListData":{"rows":[],"hasMore":false,"page":1},"inviteRegisterList":{"rows":[],"hasMore":false,"page":1},"loading":true},"help":{"reportRecord":{},"violationRecord":{},"appealsRecord":{},"communityGuide":{},"currentTab":"report"},"letterDetail":{"letterData":{"rows":[],"page":1,"size":100,"total_page":0,"hasMore":true},"loading":true,"readAll":false},"inbox":{"list":{"page":1,"count":0,"rows":{"inbox":{},"messages":[]},"total_page":1},"loading":false},"note":{"notes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified","query":"mine","q":""},"bookmarkNotes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified"},"noteDetail":{},"detail":[]},"noticeDetail":{"noticeData":{"rows":[],"offset":"","hasMore":true,"isStopScrollLoad":false,"loadedNum":1},"loading":true,"readAll":false},"personal":{"realTabName":"timeline","personalInfo":{},"listInfo":{},"blogs":[],"tags":{},"badges":{},"ranks":{},"loading":false,"financeInfo":{},"dashboardInfo":{},"dashboardHot":{"offset":1,"rows":[],"hasMore":false},"hotLoading":false},"personalSetting":{"userInfo":{},"accountInfo":{},"notifyInfo":{},"blockInfo":{"rows":[],"page":1,"total_page":1},"labInfo":{},"privacyInfo":{},"errorMsg":{"type":"","msg":""}},"portal":{"pageData":{},"noticeData":[]},"question":{"questionDetail":{},"relateDetail":{},"quotedData":{}},"questionList":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"updateList":{"offset":"","rows":[]},"showLoading":false,"hostData":{},"userRank":{},"notices":{},"loading":false,"currentTab":"","isServerLoad":true,"asidesData":{}},"review":{"loading":true,"articelDetail":{},"suggestEditDetail":{},"tagEditDetail":{},"questionDetail":{},"answerDetail":{},"closeDetail":{},"tagCleanDetail":{},"homeData":{"rows":[]}},"rivision":{"breadNav":[],"detail":[]},"search":{"result":{"rows":[],"page":1,"size":15,"q":"","total_page":0,"query":""}},"sites":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"articleList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"loading":false,"information":{},"hottestArticles":[],"users":[]},"sitesSet":{"loading":false,"information":{"contacts":{"site":"","customer_service":"","weibo":"","twitter":"","github":""}}},"tag":{"rows":[],"loadMoreType":"scroll","offset":0,"page":1,"pageSize":30,"info":{},"loadedNum":0,"hasMore":false,"isStopLoad":false,"showLoading":true,"type":"","totalPage":0,"sort":"newest","allTagList":{}},"tagRivision":{"tagInfo":{},"detail":[]},"userTop":{"data":{}},"loading":{"global":false,"models":{"articleDetail":false},"effects":{"articleDetail\u002FgetArtDetail":false,"articleDetail\u002FgetQuoted":false}}};
+	</script>
+
+    <script src="https://static.geetest.com/static/tools/gt.js"></script>
+    <script src="https://static.segmentfault.com/main_site/86059dee/umi.js"></script>
+ -->
+
+</body></html>

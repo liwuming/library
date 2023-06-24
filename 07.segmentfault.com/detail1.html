@@ -1,0 +1,3881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#33b5e5">
+
+
+  <link rel="stylesheet" href="https://cdn.ibiancheng.net/static/translate/core.min.css">
+  
+  <link rel="stylesheet" href="./static.css">
+
+
+
+  <link rel="stylesheet"
+    href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+
+
+  <link rel='stylesheet' id='roboto-subset.css-css'
+    href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5'
+    type='text/css' media='all' />
+
+
+  <meta charset="utf-8">
+  <title>MDB Foundations - Quick start</title>
+
+  <meta name="description"
+    content="In this short and concise lesson, you will learn how super fast and easily you can launch MDB and create your first project">
+  <meta name="image"
+    content="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/assets/featured-image.png">
+
+  <meta itemprop="name" content="MDB Foundations - Quick start">
+  <meta itemprop="description"
+    content="In this short and concise lesson, you will learn how super fast and easily you can launch MDB and create your first project">
+  <meta itemprop="image"
+    content="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/assets/featured-image.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="MDB Foundations - Quick start">
+  <meta property="twitter:description"
+    content="In this short and concise lesson, you will learn how super fast and easily you can launch MDB and create your first project">
+  <meta property="twitter:site" content="@MDBootstrap">
+  <meta property="twitter:creator" content="@MDBootstrap">
+  <meta property="twitter:image:src"
+    content="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/assets/featured-image.png">
+  <meta property="twitter:player"
+    content="https://www.youtube.com/watch?v=hb5ypV0ZHt0&amp;list=PLl1gkwYU90QkeAAHno3iVJokh2evwMwaX&amp;index=2&amp;ab_channel=Keepcoding">
+
+  <meta property="og:title" content="MDB Foundations - Quick start">
+  <meta property="og:description"
+    content="In this short and concise lesson, you will learn how super fast and easily you can launch MDB and create your first project">
+  <meta property="og:image"
+    content="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/assets/featured-image.png">
+  <meta property="og:url" content="https://mdbootstrap.com/learn/mdb-foundations/basics/quick-start/">
+  <meta property="og:site_name" content="MDB - Material Design for Bootstrap">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:video"
+    content="https://www.youtube.com/watch?v=hb5ypV0ZHt0&amp;list=PLl1gkwYU90QkeAAHno3iVJokh2evwMwaX&amp;index=2&amp;ab_channel=Keepcoding">
+  <meta property="fb:admins" content="443467622524287">
+  <meta property="og:type" content="website">
+
+  <link rel="shortcut icon" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/favicon.ico" />
+
+  <link rel="canonical" href="https://mdbootstrap.com/learn/mdb-foundations/basics/quick-start/" />
+
+  <style>
+    #navbarNotification::after {
+      content: none !important;
+    }
+
+
+    #main-navbar .badge {
+      position: absolute;
+      font-size: .6rem;
+      margin-top: -.1rem;
+      margin-left: -.5rem;
+      padding: .2em .45em;
+    }
+
+
+    #main-navbar .nav-link {
+      color: rgba(0, 0, 0, .55) !important;
+      font-size: 1rem !important;
+      font-weight: 400;
+    }
+
+    #main-navbar .nav-link :hover {
+      color: rgb(76, 76, 76);
+    }
+
+
+
+    [aria-labelledby=new-mdb-technologies-dropdown] li {
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    [aria-labelledby=new-mdb-technologies-dropdown] li :hover {
+      background-color: #EEEEEE !important;
+      box-shadow: none !important;
+    }
+
+    [aria-labelledby=userDropdown] a {
+      background-color: rgb(255, 255, 255) !important;
+      box-shadow: none !important;
+    }
+
+    [aria-labelledby=userDropdown] a:hover {
+      background-color: #EEEEEE !important;
+    }
+
+    #navbarNotificationContent a {
+      background-color: rgb(255, 255, 255) !important;
+      box-shadow: none !important;
+    }
+
+    #navbarNotificationContent a:hover {
+      background-color: #EEEEEE !important;
+    }
+
+    .dropdown-item-pseudo-focus {
+      background-color: rgba(0, 0, 0, 0.05) !important;
+      box-shadow: none !important;
+    }
+  </style>
+  <style>
+    .docs-pills {
+      border-radius: 0.5rem;
+    }
+
+    .docs-pills pre[class*="language-"] {
+      border-bottom-right-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    .docs-pills .btn-copy-code,
+    .docs-tab-content .export-to-snippet {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      box-shadow: none !important;
+      color: #616161 !important;
+      background-color: transparent !important;
+      padding: 6px 15px !important;
+    }
+  </style>
+  <style>
+    @media (max-width: 576px) {
+
+      [id^=dpl-],
+      [class^=dpl-],
+      .mobile-hidden {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+<body class="mdb-skin-custom ">
+
+  <header>
+    <style>
+      #mdb-sidenav .sidenav-collapse,
+      .sidenav .rotate-icon {
+        transition-property: none;
+      }
+
+      #mdb-sidenav .fas {
+        color: #9FA6B2;
+      }
+
+      #mdb-sidenav a {
+        color: #4B5563;
+      }
+
+      #mdb-sidenav a.active {
+        background-color: rgba(18, 102, 241, .05);
+      }
+
+      #mdb-sidenav .sidenav-item {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      #mdb-sidenav .sidenav-item:first-child {
+        margin-top: 4px;
+      }
+
+      #mdb-sidenav .sidenav-item:last-child {
+        margin-bottom: 4px;
+      }
+
+      #mdb-sidenav-toggler {
+        display: none;
+        background-color: transparent;
+      }
+
+      .mdb-docs-layout {
+        padding-left: 240px;
+      }
+
+      @media (max-width: 1440px) {
+        #mdb-sidenav-toggler {
+          display: unset;
+        }
+
+        #mdb-sidenav {
+          transform: translate(-100%);
+        }
+
+        .mdb-docs-layout {
+          padding-left: 0px;
+        }
+      }
+
+      .sidenav-icon {
+        color: #9fa6b2;
+        height: 14px;
+      }
+    </style>
+
+    <div class="sidenav" data-mdb-mode="over" data-mdb-hidden="true" data-mdb-accordion="true"
+      data-mdb-transition-duration="200" id="mdb-sidenav" role="navigation">
+
+
+
+      <a class="ripple d-flex justify-content-center py-4" href="/" data-mdb-ripple-color="primary">
+        <img id="MDB-logo" src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.webp"
+          alt="MDB Logo" draggable="false">
+      </a>
+
+      <div id="dpl-sidenav-top" class="w-100 text-center"></div>
+
+      <ul class="sidenav-menu" style="padding-bottom: 300px;">
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;"><i class="fas fa-download fa-fw me-3"></i></div>
+            <span>
+              Getting started
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/">About MDB</a>
+
+            </li>
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/material-minimal/">About Material
+                Minimal</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/installation/">Installation</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/learn/mdb-foundations/basics/introduction/">Tutorials</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/optimization/">Optimization</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/changelog/">Changelog</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/supported-browsers/">Supported Browsers</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/vsc-snippets/">VSC snippets</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/rtl/">RTL</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/internationalization/">Internationalization
+                (i18n)</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/webpack-integration/">Webpack</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/vite-integration/">Vite</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/parcel-integration/">Parcel</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/getting-started/gulp-integration/">Gulp</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/freebies/">Free starter templates</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-gem fa-fw me-3"></i></div>
+            <span>
+              MDB Pro
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class='sidenav-link ' href="/docs/standard/pro/">About MDB Pro</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/installation/">Installation</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/plugins-installation/">Plugins installation</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/quick-start/">Quick start</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/faq/">FAQ</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/git/">Git &amp; repository</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/support/">Premium support</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/updates/">Updates</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/pro/enterprise/">Enterprise &amp; Resellers</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-database fa-fw me-3"></i></div>
+            <span>
+              CLI &amp; free hosting
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class="sidenav-link" href="https://mdbgo.com/" target="_blank">About MDB GO / CLI</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/getting-started/quick-start/" target="_blank">Quick
+                start</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/getting-started/installation/"
+                target="_blank">Getting started</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/getting-started/overview/"
+                target="_blank">Overview</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/projects/frontend/" target="_blank">Frontend</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/projects/backend/" target="_blank">Backend</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/databases/mysql/" target="_blank">Databases</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/projects/wordpress/" target="_blank">WordPress</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/custom-domains/external-domains/"
+                target="_blank">Configuration</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/cli/reference/" target="_blank">Reference</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link" href="https://mdbgo.com/docs/getting-started/changelog/"
+                target="_blank">Changelog</a>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-puzzle-piece fa-fw me-3"></i></div>
+            <span>
+              Integrations
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/expressjs/">Express.js</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/laravel/">Laravel</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/aspnet/">ASP.NET</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/django/">Django</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/flask/">Flask</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/integrations/rails/">Ruby on Rails</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-th-large fa-fw me-3"></i></div>
+            <span>
+              Layout
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class='sidenav-link ' href="/docs/standard/layout/grid/">Grid system</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/breakpoints/">Breakpoints</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/containers/">Containers</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/columns/">Columns</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/css-grid/">CSS Grid</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/display/">Display</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/flexbox/">Flexbox</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/float/">Float</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/gutters/">Gutters</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/horizontal-alignment/">Horizontal alignment</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/utilities-for-layout/">Utilities for layout</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/vertical-alignment/">Vertical alignment</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/layout/z-index/">Z-index</a>
+
+            </li>
+
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-paint-brush fa-fw me-3"></i></div>
+            <span>
+              Content &amp; styles
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/theme/">Theme</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/animations/">Animations</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/background-image/">Background image</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/colors/">Colors</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/css-variables/">CSS variables</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/dividers/">Dividers</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/figures/">Figures</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/flags/">Flags</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/hover-effects/">Hover effects</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/icons/">Icons</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/images/">Images</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/masks/">Masks</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/reboot/">Reboot</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/shadows/">Shadows</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/content-styles/typography/">Typography</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-bars fa-fw me-3"></i></div>
+            <span>
+              Navigation
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/breadcrumb/">Breadcrumb</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/footer/">Footer</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/headers/">Headers</a>
+
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/navbar/">Navbar</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/pagination/">Pagination</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/pills/">Pills</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/scrollspy/">Scrollspy</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/sidenav/">Sidenav</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/navigation/tabs/">Tabs</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-cubes fa-fw me-3"></i></div>
+            <span>
+              Components
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/accordion/">Accordion</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/alerts/">Alerts</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/badges/">Badges</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/buttons/">Buttons</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/button-group/">Button group</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/cards/">Cards</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/carousel/">Carousel</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/chips/">Chips</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/collapse/">Collapse</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/dropdowns/">Dropdowns</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/lightbox/">Lightbox</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/list-group/">List group</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/modal/">Modal</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/placeholders/">Placeholders</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/popconfirm/">Popconfirm</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/popovers/">Popovers</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/progress/">Progress</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/rating/">Rating</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/spinners/">Spinners</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/stepper/">Stepper</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/toasts/">Toasts</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/components/tooltips/">Tooltips</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-edit fa-fw me-3"></i></div>
+            <span>
+              Forms
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item" style="border-bottom: 1px solid #eee;">
+              <a class='sidenav-link ' href="/docs/standard/forms/overview/">Overview</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/autocomplete/">Autocomplete</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/checkbox/">Checkbox</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/datepicker/">Datepicker</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/datetimepicker/">DateTimepicker</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/file/">File</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/input-fields/">Input fields</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/input-group/">Input group</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/multi-range-slider/">Multi range</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/search/">Search</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/select/">Select</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/switch/">Switch</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/radio/">Radio</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/range/">Range</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/timepicker/">Timepicker</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/forms/validation/">Validation</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-table fa-fw me-3"></i></div>
+            <span>
+              Data
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/data/charts/">Charts</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/data/charts-advanced/">Charts advanced</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/data/tables/">Tables</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/data/datatables/">Datatables</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-wrench fa-fw me-3"></i></div>
+            <span>
+              Utilities
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/api/">API</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/borders/">Borders</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/clearfix/">Clearfix</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/close-button/">Close button</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/embeds/">Embeds</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/interactions/">Interactions</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/opacity/">Opacity</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/overflow/">Overflow</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/position/">Position</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/screen-readers/">Screen readers</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/sizing/">Sizing</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/spacing/">Spacing</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/stacks/">Stacks</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/stretched-link/">Stretched link</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/text/">Text</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/text-truncation/">Text truncation</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/vertical-rule/">Vertical rule</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/utilities/visibility/">Visibility</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-code fa-fw me-3"></i></div>
+            <span>
+              Methods
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/clipboard/">Clipboard</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/infinite-scroll/">Infinite scroll</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/lazy-loading/">Lazy loading</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/loading-management/">Loading management</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/ripple/">Ripple</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/scrollbar/">Scrollbar</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/smooth-scroll/">Smooth scroll</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/sticky/">Sticky</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/methods/touch/">Touch</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-layer-group fa-fw me-3"></i></div>
+            <span>
+              Design blocks
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/admin/">Admin</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/blog/">Blog</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/ecommerce/">eCommerce</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/industries/">Industries</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/landing-page/">Landing page</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/design-blocks/portfolio/">Portfolio</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-plug fa-fw me-3"></i></div>
+            <span>
+              Plugins
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/calendar/">Calendar</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/captcha/">Captcha</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/color-picker/">Color picker</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/cookies-management/">Cookies management</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/countdown/">Countdown</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/data-parser/">Data parser</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/drag-and-drop/">Drag and drop</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/dummy/">Dummy</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/ecommerce-gallery/">eCommerce gallery</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/file-upload/">File upload</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/filters/">Filters</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/input-mask/">Input mask</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/mention/">Mention</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/multi-item-carousel/">Multi item carousel</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/onboarding/">Onboarding</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/organization-chart/">Organization chart</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/parallax/">Parallax</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/scroll-status/">Scroll status</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/storage-management/">Storage management</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/table-editor/">Table editor</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/transfer/">Transfer</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/tree-view/">Tree view</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/treetable/">TreeTable</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/vector-maps/">Vector maps</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/plugins/wysiwyg-editor/">WYSIWYG editor</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class="fas fa-image fa-fw me-3"></i></div>
+            <span>
+              Templates
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/templates/admin-dashboard/">Admin dashboards</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/templates/blog/">Blog</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/templates/ecommerce/">eCommerce</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/templates/landing-page/">Landing pages</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/templates/portfolio/">Portfolios</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidenav-item">
+          <a class="sidenav-link">
+            <div style="width: 33.5px;  "><i class='fas fa-tools fa-fw me-3'></i></div>
+            <span>
+              Resources <span class='badge bg-primary ms-2'>New</span>
+            </span>
+          </a>
+          <ul class="sidenav-collapse">
+
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="https://mdb-builder.com">Drag &amp; drop builder</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/lab/">Lab</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/tools/">Design generators</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/newsletter/">Newsletter</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="https://www.youtube.com/c/Mdbootstrap?sub_confirmation=1">YouTube
+                channel</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="https://www.facebook.com/groups/682245759188413">Private FB group</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="/docs/standard/customization/ui-ux-tips/">UI / UX tips</a>
+
+            </li>
+            <li class="sidenav-item">
+              <a class='sidenav-link ' href="https://material-minimal.com/">UI Design course <span
+                  class='badge bg-primary ms-2'>New</span></a>
+
+            </li>
+          </ul>
+        </li>
+
+
+      </ul>
+
+
+    </div>
+
+    <span id="dpl-auth-modal"></span>
+
+    <style>
+      #mdb-navbar {
+        padding-left: 240px;
+        height: 58px;
+      }
+
+      #mdb-navbar-brand-logo {
+        display: none;
+      }
+
+      #sidenav-toggler {
+        display: none;
+      }
+
+      #mdb-5-search-container {
+        position: relative;
+        font-size: .8rem;
+      }
+
+      #mdb-5-search-dropdown {
+        display: none;
+        position: absolute;
+        top: 36px;
+        overflow-y: hidden;
+        width: 100%;
+        z-index: 999999;
+        background-color: white;
+      }
+
+      .mdb-5-search-keywords {
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      #mdb-5-search-list {
+        overflow-y: scroll;
+        max-height: 265px;
+        position: relative;
+      }
+
+      #mdb-5-search-list li a {
+        transition: background-color .3s ease-in;
+      }
+
+      #mdb-5-search-list li a:hover,
+      #mdb-5-search-list li a:active,
+      #mdb-5-search-list li a:focus {
+        background-color: rgba(0, 0, 0, 0.05);
+        outline: none;
+      }
+
+      #mdb-5-search-input {
+        min-width: 230px;
+      }
+
+      #mdb-5-search-icon {
+        transition: color .3s ease-out;
+      }
+
+
+      @media (max-width: 1440px) {
+        #sidenav-toggler {
+          display: inline-block;
+        }
+      }
+
+      @media (max-width: 1440px) {
+        #mdb-navbar {
+          padding-left: 0;
+        }
+      }
+    </style>
+    <nav id="mdb-navbar" class="  navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-2">
+      <div class="container-fluid">
+        <button id="sidenav-toggler" data-mdb-toggle="sidenav" data-mdb-target="#mdb-sidenav" type="button"
+          class="btn shadow-0 p-0 me-3"><i class="fas fa-bars fa-lg"></i></button>
+        <a class="navbar-brand me-2" id="mdb-navbar-brand-logo" href="https://mdbootstrap.com/">
+          <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="" loading="lazy"
+            style="margin-top: -1px">
+        </a>
+
+
+        <div id="mdb-5-search-container">
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <input id="mdb-5-search-input" autocomplete="off" type="search" class="form-control rounded"
+              placeholder='Search (ctrl + "/" to focus)' />
+            <span class="input-group-text border-0"><i class="fas fa-search" id="mdb-5-search-icon"></i></span>
+          </form>
+          <div id="mdb-5-search-dropdown" class="rounded shadow-5">
+            <ul id="mdb-5-search-list" class="list-unstyled mb-0"></ul>
+            <hr class="my-0">
+            <p class="text-muted small text-end pe-3 mt-3">search results: <strong id="mdb-5-search-count"></strong></p>
+          </div>
+        </div>
+
+
+
+        <span id="dpl-navbar-new-right-buttons" class="navbar-nav ms-auto d-flex flex-row"></span>
+
+
+      </div>
+    </nav>
+
+
+
+  </header>
+<!--
+  <style>
+    #mdb-navbar {
+      padding-left: 0px;
+    }
+
+    #sidenav-toggler {
+      display: inline-block;
+    }
+
+    .mdb-docs-layout {
+      padding-left: 0px;
+    }
+
+    #mdb-footer {
+      padding-left: 0px;
+    }
+
+    #mdb-navbar-brand-logo {
+      display: inline;
+      padding-top: 1px;
+    }
+
+    #svg-about-intro {
+      height: 410px;
+    }
+
+    @media (min-width: 1200px) {
+      #svg-about-intro {
+        height: 630px;
+      }
+    }
+  </style>
+
+
+
+
+
+  <style>
+    #mdb-tutorial-content .accordion-button {
+      padding: 0.9rem 1.4rem;
+    }
+
+    #mdb-tutorial-content .accordion-borderless .accordion-item .accordion-button:not(.collapsed),
+    #mdb-tutorial-content .list-group-item-primary,
+    .list-group-item.active {
+      background-color: hsl(219, 56.1%, 97%) !important;
+    }
+
+    #mdb-tutorial-content .accordion-button:after {
+      width: 0.9rem;
+      height: 0.9rem;
+      background-size: 0.9rem
+    }
+
+    #mdb-tutorial-content .accordion .fa-circle {
+      font-size: 8px;
+      margin-left: 2px;
+    }
+
+    #mdb-tutorial-content .accordion .list-group-small .list-group-item {
+      padding: 0.5rem 1rem !important;
+      font-size: 0.9rem;
+    }
+  </style>
+  -->
+  <main class="py-5 mdb-docs-layout" style="margin-top: 58px;">
+    <div class="container">
+      <section id="mdb-tutorial-content" class="">
+        <div class="row gx-lg-5">
+          <div class="col-lg-9 mb-5 mb-lg-0">
+            <section class="mb-4">
+              <h1 class="h3 fw-bold mb-4">Quick start</h1>
+
+              <hr class="hr my-4">
+
+              <p>We have a long and fascinating journey ahead of us. However, before we move on to the individual
+                aspects of our planned tour, I would like you to have the opportunity right now to feel the potential
+                that MDB gives you.</p>
+
+              <p>Therefore, in this short and concise lesson, I will show you how super fast and easily you can launch
+                MDB and create your first small project.</p>
+
+              <div class="note note-light mb-5">
+                <strong>Note:</strong> Take this lesson as a demonstration and don't worry if not everything is clear to
+                you. Each aspect covered here will be explained in detail in future lessons.
+              </div>
+
+              <h5 class="fw-bold mb-3">Step 1 - download and setup MDB</h5>
+
+              <p>We will use the simplest method of installing MDB, i.e. download the .zip package.</p>
+
+              <p><a href="https://mdbootstrap.com/docs/standard/getting-started/installation/" class="fw-bold">Go to the
+                  installation page</a> and click the big, red button <strong>"MDB 5 download"</strong>.</p>
+
+              <img src="./assets/mdb-download.jpg" class="border p-4 rounded-5 mb-4" alt="" style="max-width: 420px;">
+
+              <p>Then unzip the downloaded package and open it in your favorite code editor.</p>
+
+              <div class="note note-primary mb-5">
+                <p><strong>Note:</strong> The code editor is a matter of preference, but if someone asks me what I would
+                  recommend, my answer is <strong>Visual Studio Code</strong>.</p>
+                <p>It's free and you can download it <a target="_blank"
+                    href="https://code.visualstudio.com/download"><strong>here</strong></a>.</p>
+              </div>
+
+              <h5 class="fw-bold mb-3">Step 2 - open <code>index.html</code> file</h5>
+
+              <p>In the unpacked MDB directory, locate the <code>index.html</code> file, then drag and drop it into the
+                browser window. You will see the MDB welcome message.</p>
+
+              <img src="./assets/welcome.jpg" alt="Bootstrap" class="w-100 border rounded-7 p-4 mb-4">
+
+              <p>Then open <code>index.html</code> in the code editor. You will see a code like this:</p>
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_d5a4987e02ae75e1e09de07af43e00aee16111e8" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_d5a4987e02ae75e1e09de07af43e00aee16111e8"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&#34;en&#34;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&#34;UTF-8&#34; /&gt;
+        &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34; /&gt;
+        &lt;meta http-equiv=&#34;x-ua-compatible&#34; content=&#34;ie=edge&#34; /&gt;
+        &lt;title&gt;Material Design for Bootstrap&lt;/title&gt;
+        &lt;!-- MDB icon --&gt;
+        &lt;link rel=&#34;icon&#34; href=&#34;img/mdb-favicon.ico&#34; type=&#34;image/x-icon&#34; /&gt;
+        &lt;!-- Font Awesome --&gt;
+        &lt;link
+          rel=&#34;stylesheet&#34;
+          href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css&#34;
+        /&gt;
+        &lt;!-- Google Fonts Roboto --&gt;
+        &lt;link
+          rel=&#34;stylesheet&#34;
+          href=&#34;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap&#34;
+        /&gt;
+        &lt;!-- MDB --&gt;
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;css/mdb.min.css&#34; /&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+        &lt;!-- Start your project here--&gt;
+        &lt;div class=&#34;container&#34;&gt;
+          &lt;div class=&#34;d-flex justify-content-center align-items-center&#34; style=&#34;height: 100vh&#34;&gt;
+            &lt;div class=&#34;text-center&#34;&gt;
+              &lt;img
+                class=&#34;mb-4&#34;
+                src=&#34;https://mdbootstrap.com/img/logo/mdb-transparent-250px.png&#34;
+                style=&#34;width: 250px; height: 90px&#34;
+              /&gt;
+              &lt;h5 class=&#34;mb-3&#34;&gt;Thank you for using our product. We&#39;re glad you&#39;re with us.&lt;/h5&gt;
+              &lt;p class=&#34;mb-3&#34;&gt;MDB Team&lt;/p&gt;
+              &lt;a
+                class=&#34;btn btn-primary btn-lg&#34;
+                href=&#34;https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/&#34;
+                target=&#34;_blank&#34;
+                role=&#34;button&#34;
+                &gt;Start MDB tutorial&lt;/a
+              &gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End your project here--&gt;
+    
+        &lt;!-- MDB --&gt;
+        &lt;script type=&#34;text/javascript&#34; src=&#34;js/mdb.min.js&#34;&gt;&lt;/script&gt;
+        &lt;!-- Custom scripts --&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+    
+      
+    
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <p class="">That's quite a lot of code, and it can feel a bit overwhelming to start with. But don't worry
+                about it now, we'll explain in detail what each of these lines means and does in the next lessons.</p>
+
+              <h5 class="fw-bold mt-5 mb-3">Step 3 - prepare <code>index.html</code> file for the new project</h5>
+
+              <p>Let's remove unnecessary code so we have a place for our new project.</p>
+
+              <p>On line 25 you will find the comment <code>Start your project here</code> and on line 46 you will find
+                <code>End your project here</code>. In between is the code with the MDB welcome message:</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_598a41ed97145eef40cf031fdc3dfa8102a5be01" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_598a41ed97145eef40cf031fdc3dfa8102a5be01"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+    
+        &lt;!-- Start your project here--&gt;
+        &lt;div class=&#34;container&#34;&gt;
+          &lt;div class=&#34;d-flex justify-content-center align-items-center&#34; style=&#34;height: 100vh&#34;&gt;
+            &lt;div class=&#34;text-center&#34;&gt;
+              &lt;img
+                class=&#34;mb-4&#34;
+                src=&#34;https://mdbootstrap.com/img/logo/mdb-transparent-250px.png&#34;
+                style=&#34;width: 250px; height: 90px&#34;
+              /&gt;
+              &lt;h5 class=&#34;mb-3&#34;&gt;Thank you for using our product. We&#39;re glad you&#39;re with us.&lt;/h5&gt;
+              &lt;p class=&#34;mb-3&#34;&gt;MDB Team&lt;/p&gt;
+              &lt;a
+                class=&#34;btn btn-primary btn-lg&#34;
+                href=&#34;https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/&#34;
+                target=&#34;_blank&#34;
+                role=&#34;button&#34;
+                &gt;Start MDB tutorial&lt;/a
+              &gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End your project here--&gt;
+
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p><strong>Remove it</strong>, save the file, and refresh the browser. You should see a completely blank,
+                white screen. Now we are ready to start our project.</p>
+
+              <h5 class="fw-bold mt-5 mb-3">Step 4 - add navigation bar</h5>
+
+              <p>Go to the <a class="fw-bold" href="https://mdbootstrap.com/docs/standard/navigation/navbar/">navbar
+                  documentation page</a> and locate the section <strong>"Basic example"</strong> at the very beginning
+                of that page. Click <strong>"show code"</strong> and copy the code.</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_1fd6258142efb1b32e007ce261244c61ff3b15f1" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_1fd6258142efb1b32e007ce261244c61ff3b15f1"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;!-- Navbar --&gt;
+        &lt;nav class=&#34;navbar navbar-expand-lg navbar-light bg-light&#34;&gt;
+          &lt;!-- Container wrapper --&gt;
+          &lt;div class=&#34;container-fluid&#34;&gt;
+            &lt;!-- Toggle button --&gt;
+            &lt;button
+              class=&#34;navbar-toggler&#34;
+              type=&#34;button&#34;
+              data-mdb-toggle=&#34;collapse&#34;
+              data-mdb-target=&#34;#navbarSupportedContent&#34;
+              aria-controls=&#34;navbarSupportedContent&#34;
+              aria-expanded=&#34;false&#34;
+              aria-label=&#34;Toggle navigation&#34;
+            &gt;
+              &lt;i class=&#34;fas fa-bars&#34;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+
+            &lt;!-- Collapsible wrapper --&gt;
+            &lt;div class=&#34;collapse navbar-collapse&#34; id=&#34;navbarSupportedContent&#34;&gt;
+              &lt;!-- Navbar brand --&gt;
+              &lt;a class=&#34;navbar-brand mt-2 mt-lg-0&#34; href=&#34;#&#34;&gt;
+                &lt;img
+                  src=&#34;https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp&#34;
+                  height=&#34;15&#34;
+                  alt=&#34;MDB Logo&#34;
+                  loading=&#34;lazy&#34;
+                /&gt;
+              &lt;/a&gt;
+              &lt;!-- Left links --&gt;
+              &lt;ul class=&#34;navbar-nav me-auto mb-2 mb-lg-0&#34;&gt;
+                &lt;li class=&#34;nav-item&#34;&gt;
+                  &lt;a class=&#34;nav-link&#34; href=&#34;#&#34;&gt;Dashboard&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&#34;nav-item&#34;&gt;
+                  &lt;a class=&#34;nav-link&#34; href=&#34;#&#34;&gt;Team&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&#34;nav-item&#34;&gt;
+                  &lt;a class=&#34;nav-link&#34; href=&#34;#&#34;&gt;Projects&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;!-- Left links --&gt;
+            &lt;/div&gt;
+            &lt;!-- Collapsible wrapper --&gt;
+
+            &lt;!-- Right elements --&gt;
+            &lt;div class=&#34;d-flex align-items-center&#34;&gt;
+              &lt;!-- Icon --&gt;
+              &lt;a class=&#34;text-reset me-3&#34; href=&#34;#&#34;&gt;
+                &lt;i class=&#34;fas fa-shopping-cart&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+
+              &lt;!-- Notifications --&gt;
+              &lt;div class=&#34;dropdown&#34;&gt;
+                &lt;a
+                  class=&#34;text-reset me-3 dropdown-toggle hidden-arrow&#34;
+                  href=&#34;#&#34;
+                  id=&#34;navbarDropdownMenuLink&#34;
+                  role=&#34;button&#34;
+                  data-mdb-toggle=&#34;dropdown&#34;
+                  aria-expanded=&#34;false&#34;
+                &gt;
+                  &lt;i class=&#34;fas fa-bell&#34;&gt;&lt;/i&gt;
+                  &lt;span class=&#34;badge rounded-pill badge-notification bg-danger&#34;&gt;1&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul
+                  class=&#34;dropdown-menu dropdown-menu-end&#34;
+                  aria-labelledby=&#34;navbarDropdownMenuLink&#34;
+                &gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Some news&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another news&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+              &lt;!-- Avatar --&gt;
+              &lt;div class=&#34;dropdown&#34;&gt;
+                &lt;a
+                  class=&#34;dropdown-toggle d-flex align-items-center hidden-arrow&#34;
+                  href=&#34;#&#34;
+                  id=&#34;navbarDropdownMenuAvatar&#34;
+                  role=&#34;button&#34;
+                  data-mdb-toggle=&#34;dropdown&#34;
+                  aria-expanded=&#34;false&#34;
+                &gt;
+                  &lt;img
+                    src=&#34;https://mdbcdn.b-cdn.net/img/new/avatars/2.webp&#34;
+                    class=&#34;rounded-circle&#34;
+                    height=&#34;25&#34;
+                    alt=&#34;Black and White Portrait of a Man&#34;
+                    loading=&#34;lazy&#34;
+                  /&gt;
+                &lt;/a&gt;
+                &lt;ul
+                  class=&#34;dropdown-menu dropdown-menu-end&#34;
+                  aria-labelledby=&#34;navbarDropdownMenuAvatar&#34;
+                &gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;My profile&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Settings&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Logout&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Right elements --&gt;
+          &lt;/div&gt;
+          &lt;!-- Container wrapper --&gt;
+        &lt;/nav&gt;
+        &lt;!-- Navbar --&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>Then paste it into the <code>index.html</code> file and save it. After refreshing the browser you
+                should see a nice, interactive navigation bar.</p>
+
+              <section class="w-100 p-4 pb-4 border rounded-5 mb-4" style="background-color: #eee;">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <!-- Container wrapper -->
+                  <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                      data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <!-- Navbar brand -->
+                      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                          alt="MDB Logo" loading="lazy" />
+                      </a>
+                      <!-- Left links -->
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Projects</a>
+                        </li>
+                      </ul>
+                      <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                      <!-- Icon -->
+                      <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                      </a>
+
+                      <!-- Notifications -->
+                      <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                          role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          <i class="fas fa-bell"></i>
+                          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                          <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- Avatar -->
+                      <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                          id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                            alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                          <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Right elements -->
+                  </div>
+                  <!-- Container wrapper -->
+                </nav>
+                <!-- Navbar -->
+
+              </section>
+
+              <p>You have just successfully used the first MDB component. Good job!</p>
+
+              <p>By the way - can you see the class <code>bg-light</code> in the first line of the navbar component? It
+                sets a gray background to the navbar. Let's change it to <code>bg-white</code>, so we have a purely
+                white navigation bar.</p>
+
+              <div class="note note-primary mb-3">
+                <strong>Note:</strong> If you want to learn more about available color classes have a look at <a
+                  href="https://mdbootstrap.com/docs/standard/content-styles/colors/#subsection-background">color
+                  documentation page</a>.
+              </div>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_0ab7b49bc380413bf3e92463e4d8828453fc3de0" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_0ab7b49bc380413bf3e92463e4d8828453fc3de0"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;!-- Navbar --&gt;
+        &lt;nav class=&#34;navbar navbar-expand-lg navbar-light bg-white&#34;&gt;
+
+        &lt;!-- [...the rest of the code] --&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <h5 class="fw-bold mt-5 mb-3">Step 5 - add jumbotron</h5>
+
+              <p>It would be good to add some element that would stand out from the start.</p>
+
+              <p>Such an element may be a jumbotron, which is commonly understood as a banner with information crucial
+                for our website.</p>
+
+              <p>Directly under the navbar, add the following code:</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_3fc33b375e93a2db34a5e80301250ee69d3d84a8" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_3fc33b375e93a2db34a5e80301250ee69d3d84a8"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;!-- Jumbotron --&gt;
+        &lt;div class=&#34;p-5 text-center bg-light&#34;&gt;
+          &lt;h1 class=&#34;mb-3&#34;&gt;I am learning MDB&lt;/h1&gt;
+          &lt;h4 class=&#34;mb-4&#34;&gt;...and it&#39;s awesome!&lt;/h4&gt;
+          &lt;a class=&#34;btn btn-primary btn-lg&#34; href=&#34;https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/&#34;
+            role=&#34;button&#34;&gt;Learn with me&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;!-- Jumbotron --&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>Save the file and refresh the browser. Our website is taking shape!</p>
+
+              <section class="w-100 p-4 pb-4 border rounded-5 mb-4" style="background-color: #eee;">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                  <!-- Container wrapper -->
+                  <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                      data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <!-- Navbar brand -->
+                      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                          alt="MDB Logo" loading="lazy" />
+                      </a>
+                      <!-- Left links -->
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Projects</a>
+                        </li>
+                      </ul>
+                      <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                      <!-- Icon -->
+                      <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                      </a>
+
+                      <!-- Notifications -->
+                      <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                          role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          <i class="fas fa-bell"></i>
+                          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                          <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- Avatar -->
+                      <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                          id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                            alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                          <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Right elements -->
+                  </div>
+                  <!-- Container wrapper -->
+                </nav>
+                <!-- Navbar -->
+
+                <!-- Jumbotron -->
+                <div class="p-5 text-center bg-light">
+                  <h1 class="mb-3">I am learning MDB</h1>
+                  <h4 class="mb-4">...and it's awesome!</h4>
+                  <a class="btn btn-primary btn-lg"
+                    href="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/" role="button">Learn with
+                    me</a>
+                </div>
+                <!-- Jumbotron -->
+
+              </section>
+
+              <h5 class="fw-bold mt-5 mb-3">Step 6 - add grid</h5>
+
+              <p>There is a very nice component called a card. Cards are not only visually attractive, but also great
+                for presenting various types of content.</p>
+
+              <section class="mb-4 p-4 d-flex justify-content-center w-100 border rounded-5 bg-light">
+                <div class="card" style="max-width: 22rem;">
+                  <div class="bg-image hover-overlay ripple ripple-surface-light" data-mdb-ripple-color="light"
+                    style="">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"
+                      alt="Beach Sunrise">
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's
+                      content.
+                    </p>
+                    <a href="#!" class="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </section>
+
+              <p>Wouldn't it be great to have some nice cards like this in our design? Sure it would!</p>
+
+              <p>However, there is a problem - how to place them in our layout so that they display correctly on both
+                large screens and phones? Of course, on large screens we want to have them next to each other, say 3 in
+                a row. On the other hand, they should line up one above the other on mobile.</p>
+
+              <p>This is where bootstrap grid comes in handy, which is a powerful tool for creating a responsive layout.
+              </p>
+
+              <p>We will learn about the grid in detail in future lessons. Now just trust me and just follow the steps
+                given.</p>
+
+              <p><strong>Go to the <a href="https://mdbootstrap.com/docs/standard/layout/grid/">grid documentation
+                    page</a></strong> and copy the code from the basic example section.</p>
+
+              <p>Then paste it below the jumbotron component.</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_7f502deaf67ea50c881dc7e3bc105fdf45a85b74" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_7f502deaf67ea50c881dc7e3bc105fdf45a85b74"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+      &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+            One of three columns
+          &lt;/div&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+            One of three columns
+          &lt;/div&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+            One of three columns
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>After saving the file and refreshing your browser, you should see paragraphs that indicate each of the
+                three columns.</p>
+
+              <!-- Section: Demo -->
+              <section class="mb-4 p-4 d-flex justify-content-center w-100 border rounded-5 bg-light">
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md">
+                      One of three columns
+                    </div>
+                    <div class="col-md">
+                      One of three columns
+                    </div>
+                    <div class="col-md">
+                      One of three columns
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+              <!-- Section: Demo -->
+
+              <h5 class="fw-bold mt-5 mb-3">Step 7 - add cards</h5>
+
+              <p>Now we're ready to add cards.</p>
+
+              <p><strong>Go to the <a
+                    href="https://mdbootstrap.com/docs/standard/components/cards/#subsection-image-with-ripple">cards
+                    documentation page</a></strong> and copy the code form the section <strong>"Image with
+                  ripple"</strong>.</p>
+
+              <div class="note note-primary mb-3">
+                <p><strong>What is ripple?</strong> Ripple is a Material Design effect of the propagation of circular
+                  waves upon interaction with a given element. In the documentation example, click the image or the
+                  button in the card to see it.</p>
+              </div>
+
+              <p><strong>Then paste the card code</strong> into each column in our project in <code>index.html</code>.
+              </p>
+
+              <p>If you want, you can change the pictures and texts in the cards to whatever you like.</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_0a1e1353819a3ad36d1cdf5eab6d51f5683f4461" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_0a1e1353819a3ad36d1cdf5eab6d51f5683f4461"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+      &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+    
+          &lt;!-- First column --&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+    
+            &lt;!-- Card --&gt;
+            &lt;div class=&#34;card&#34;&gt;
+              &lt;div class=&#34;bg-image hover-overlay ripple&#34; data-mdb-ripple-color=&#34;light&#34;&gt;
+                &lt;img src=&#34;https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp&#34; class=&#34;img-fluid&#34; /&gt;
+                &lt;a href=&#34;#!&#34;&gt;
+                  &lt;div class=&#34;mask&#34; style=&#34;background-color: rgba(251, 251, 251, 0.15);&#34;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class=&#34;card-body&#34;&gt;
+                &lt;h5 class=&#34;card-title&#34;&gt;Card title&lt;/h5&gt;
+                &lt;p class=&#34;card-text&#34;&gt;Some quick example text to build on the card title and make up the bulk of the card&#39;s
+                  content.&lt;/p&gt;
+                &lt;a href=&#34;#!&#34; class=&#34;btn btn-primary&#34;&gt;Button&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card --&gt;
+    
+          &lt;/div&gt;
+          &lt;!-- First column --&gt;
+    
+          &lt;!-- Second column --&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+    
+            &lt;!-- Card --&gt;
+            &lt;div class=&#34;card&#34;&gt;
+              &lt;div class=&#34;bg-image hover-overlay ripple&#34; data-mdb-ripple-color=&#34;light&#34;&gt;
+                &lt;img src=&#34;https://mdbcdn.b-cdn.net/img/new/standard/nature/112.webp&#34; class=&#34;img-fluid&#34; /&gt;
+                &lt;a href=&#34;#!&#34;&gt;
+                  &lt;div class=&#34;mask&#34; style=&#34;background-color: rgba(251, 251, 251, 0.15);&#34;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class=&#34;card-body&#34;&gt;
+                &lt;h5 class=&#34;card-title&#34;&gt;Card title&lt;/h5&gt;
+                &lt;p class=&#34;card-text&#34;&gt;Some quick example text to build on the card title and make up the bulk of the card&#39;s
+                  content.&lt;/p&gt;
+                &lt;a href=&#34;#!&#34; class=&#34;btn btn-primary&#34;&gt;Button&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card --&gt;
+    
+          &lt;/div&gt;
+          &lt;!-- Second column --&gt;
+    
+          &lt;!-- Third column --&gt;
+          &lt;div class=&#34;col-md&#34;&gt;
+    
+            &lt;!-- Card --&gt;
+            &lt;div class=&#34;card&#34;&gt;
+              &lt;div class=&#34;bg-image hover-overlay ripple&#34; data-mdb-ripple-color=&#34;light&#34;&gt;
+                &lt;img src=&#34;https://mdbcdn.b-cdn.net/img/new/standard/nature/113.webp&#34; class=&#34;img-fluid&#34; /&gt;
+                &lt;a href=&#34;#!&#34;&gt;
+                  &lt;div class=&#34;mask&#34; style=&#34;background-color: rgba(251, 251, 251, 0.15);&#34;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class=&#34;card-body&#34;&gt;
+                &lt;h5 class=&#34;card-title&#34;&gt;Card title&lt;/h5&gt;
+                &lt;p class=&#34;card-text&#34;&gt;Some quick example text to build on the card title and make up the bulk of the card&#39;s
+                  content.&lt;/p&gt;
+                &lt;a href=&#34;#!&#34; class=&#34;btn btn-primary&#34;&gt;Button&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card --&gt;
+    
+          &lt;/div&gt;
+          &lt;!-- Third column --&gt;
+    
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>Save the file and refresh the browser. Woah! Our website looks really good now.</p>
+
+              <img src="./assets/cards.jpg" class="w-100 border rounded-6 mb-4" alt="">
+
+              <p>There is one little thing worth improving. If you look closely you can see that the bottom edge of the
+                jumbotron touches the top edge of the cards. They would look better if there was a space between them.
+              </p>
+
+              <p>It's very easy to fix. Just add <code>mb-5</code> class (which stands for "margin-bottom 5 units large
+                ") to the jumbotron. We will learn more about it in the future lessons, but right now just add this to
+                your project:</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_56104e5875b9775bc75cff87eb2904270b427242" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_56104e5875b9775bc75cff87eb2904270b427242"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;!-- Jumbotron --&gt;
+        &lt;div class=&#34;p-5 text-center bg-light mb-5&#34;&gt;
+          
+        &lt;!-- [...the rest of the code] --&gt;
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <h5 class="fw-bold mt-5 mb-3">Step 8 - add footer</h5>
+
+              <p>The final step of our small project will be adding a footer.</p>
+
+              <p>A footer is an additional navigation component. It can hold links, buttons, company info, copyrights,
+                forms, and many other elements.</p>
+
+              <p><strong>Go to the <a href="https://mdbootstrap.com/docs/standard/navigation/footer/">footer
+                    documentation page</a></strong> and copy the code of the <strong>Basic example</strong>.</p>
+
+              <p>Then paste it below the grid with the cards:</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_6cf745c1a464877656b01c79173ed309f01a09b1" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_6cf745c1a464877656b01c79173ed309f01a09b1"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;!-- Footer --&gt;
+        &lt;footer class=&#34;text-center text-lg-start bg-light text-muted&#34;&gt;
+          &lt;!-- Section: Social media --&gt;
+          &lt;section class=&#34;d-flex justify-content-center justify-content-lg-between p-4 border-bottom&#34;&gt;
+            &lt;!-- Left --&gt;
+            &lt;div class=&#34;me-5 d-none d-lg-block&#34;&gt;
+              &lt;span&gt;Get connected with us on social networks:&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;!-- Left --&gt;
+
+            &lt;!-- Right --&gt;
+            &lt;div&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-facebook-f&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-twitter&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-google&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-instagram&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-linkedin&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href=&#34;&#34; class=&#34;me-4 text-reset&#34;&gt;
+                &lt;i class=&#34;fab fa-github&#34;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- Right --&gt;
+          &lt;/section&gt;
+          &lt;!-- Section: Social media --&gt;
+
+          &lt;!-- Section: Links  --&gt;
+          &lt;section class=&#34;&#34;&gt;
+            &lt;div class=&#34;container text-center text-md-start mt-5&#34;&gt;
+              &lt;!-- Grid row --&gt;
+              &lt;div class=&#34;row mt-3&#34;&gt;
+                &lt;!-- Grid column --&gt;
+                &lt;div class=&#34;col-md-3 col-lg-4 col-xl-3 mx-auto mb-4&#34;&gt;
+                  &lt;!-- Content --&gt;
+                  &lt;h6 class=&#34;text-uppercase fw-bold mb-4&#34;&gt;
+                    &lt;i class=&#34;fas fa-gem me-3&#34;&gt;&lt;/i&gt;Company name
+                  &lt;/h6&gt;
+                  &lt;p&gt;
+                    Here you can use rows and columns to organize your footer content. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit.
+                  &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- Grid column --&gt;
+
+                &lt;!-- Grid column --&gt;
+                &lt;div class=&#34;col-md-2 col-lg-2 col-xl-2 mx-auto mb-4&#34;&gt;
+                  &lt;!-- Links --&gt;
+                  &lt;h6 class=&#34;text-uppercase fw-bold mb-4&#34;&gt;
+                    Products
+                  &lt;/h6&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Angular&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;React&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Vue&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Laravel&lt;/a&gt;
+                  &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- Grid column --&gt;
+
+                &lt;!-- Grid column --&gt;
+                &lt;div class=&#34;col-md-3 col-lg-2 col-xl-2 mx-auto mb-4&#34;&gt;
+                  &lt;!-- Links --&gt;
+                  &lt;h6 class=&#34;text-uppercase fw-bold mb-4&#34;&gt;
+                    Useful links
+                  &lt;/h6&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Pricing&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Settings&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Orders&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;a href=&#34;#!&#34; class=&#34;text-reset&#34;&gt;Help&lt;/a&gt;
+                  &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- Grid column --&gt;
+
+                &lt;!-- Grid column --&gt;
+                &lt;div class=&#34;col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4&#34;&gt;
+                  &lt;!-- Links --&gt;
+                  &lt;h6 class=&#34;text-uppercase fw-bold mb-4&#34;&gt;Contact&lt;/h6&gt;
+                  &lt;p&gt;&lt;i class=&#34;fas fa-home me-3&#34;&gt;&lt;/i&gt; New York, NY 10012, US&lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;i class=&#34;fas fa-envelope me-3&#34;&gt;&lt;/i&gt;
+                    info@example.com
+                  &lt;/p&gt;
+                  &lt;p&gt;&lt;i class=&#34;fas fa-phone me-3&#34;&gt;&lt;/i&gt; &#43; 01 234 567 88&lt;/p&gt;
+                  &lt;p&gt;&lt;i class=&#34;fas fa-print me-3&#34;&gt;&lt;/i&gt; &#43; 01 234 567 89&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- Grid column --&gt;
+              &lt;/div&gt;
+              &lt;!-- Grid row --&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+          &lt;!-- Section: Links  --&gt;
+
+          &lt;!-- Copyright --&gt;
+          &lt;div class=&#34;text-center p-4&#34; style=&#34;background-color: rgba(0, 0, 0, 0.05);&#34;&gt;
+            © 2021 Copyright:
+            &lt;a class=&#34;text-reset fw-bold&#34; href=&#34;https://mdbootstrap.com/&#34;&gt;MDBootstrap.com&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;!-- Copyright --&gt;
+        &lt;/footer&gt;
+        &lt;!-- Footer --&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>Save the file and refresh the browser. You should see an extensive gray footer below the tabs.</p>
+
+              <p>However, we have a similar problem as in the step above - the bottom edge of the cards touches the top
+                edge of the footer. Let's fix this by adding the <code>mb-5</code> class to each of the
+                <code>card</code> component.</p>
+
+              <!-- Hugo code snippet -->
+              <div class="mb-4">
+                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="docs-pills border mobile-hidden">
+                  <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+                    <ul class="nav nav-pills p-2">
+
+
+
+
+                      <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab"
+                          href="#mdb_e4a6b6f87b68ea5e0037c80fe7aecbac610b86c1" role="tab">HTML</a></li>
+
+
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+
+
+
+
+
+
+                    <div class="tab-pane fade  active show " id="mdb_e4a6b6f87b68ea5e0037c80fe7aecbac610b86c1"
+                      role="tabpanel">
+                      <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+  
+        &lt;div class=&#34;card mb-5&#34;&gt;
+          
+
+        &lt;!-- [...the rest of the code] --&gt;
+  
+      
+        </code>
+    </pre>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <!-- Hugo code snippet -->
+
+              <p>Alright, our first MDB project is ready! </p>
+
+              <p>And look, it displays properly on any size screen. Change the size of the browser window to mobile view
+                to see for yourself. Isn't it nice?</p>
+
+              <p><strong>Well done, you!</strong></p>
+
+              <p>If something did not work out as it should or if you want to make sure that you did everything right -
+                click the button below to see the final result.</p>
+
+              <a class="btn btn-primary" target="_blank"
+                href="https://mdbootstrap.com/snippets/standard/ascensus/4578749" role="button">FInal demo & source
+                code</a>
+
+            </section>
+            <!-- Section: Text -->
+
+            <hr class="hr my-5">
+
+
+            <section class="d-flex justify-content-between">
+
+              <div><a class="btn btn-link" href="https://twitter.com/ascensus_mdb" role="button" rel="nofollow"
+                  target="_blank"><i class="fas fa-question-circle me-2"></i>Ask question</a></div>
+
+              <div>
+
+                <a class="btn btn-secondary me-2" href="/learn/mdb-foundations/basics/key-concepts/"><i
+                    class="fas fa-caret-left me-2"></i>Prev</a>
+
+
+
+                <a class="btn btn-primary " href="/learn/mdb-foundations/basics/deploy-your-project/">Next <i
+                    class="fas fa-caret-right ms-2"></i></a>
+
+              </div>
+
+            </section>
+
+
+            <hr class="hr my-5">
+
+
+            <section class="">
+
+
+              <div class="d-flex">
+
+                <img src="https://pbs.twimg.com/profile_images/1154666340298493952/F57OFDN7_400x400.jpg" alt="John Doe"
+                  class="me-3 rounded-circle shadow-5-strong" style="width: 90px; height: 90px;" />
+
+                <div>
+                  <div class="d-md-flex justify-content-between">
+                    <div>
+                      <p class="fw-bold text-muted">About author</p>
+                      <h5 class="fw-bold">
+                        Michal Szymanski
+                      </h5>
+                    </div>
+                    <div class="mb-2 mb-md-0">
+                      <a href="https://twitter.com/ascensus_mdb" target="_blank" rel="nofollow"><i
+                          class="fab fa-twitter me-2"></i><strong>@ascensus_mdb</strong></a>
+                    </div>
+                  </div>
+                  <p>
+                    Co Founder at MDBootstrap / Listed in Forbes „30 under 30" /
+                    Open-source enthusiast / <a class="fw-bold" href="https://youtu.be/bbKBlGxwgj8" target="_blank"
+                      rel="nofollow">Dancer</a>, nerd &
+                    book lover.
+                  </p>
+                  <p>Author of hundreds of articles on programming, business, marketing and productivity. In the past,
+                    an educator
+                    working with troubled youth in orphanages and correctional facilities.</p>
+                </div>
+              </div>
+
+
+            </section>
+          </div>
+
+
+          <div class="col-lg-3 mb-5 mb-lg-0 d-none d-lg-block">
+
+
+            <section>
+              <style>
+                .dc-content-animation {
+                  height: 20px;
+                  width: 50%;
+                  display: inline-block;
+                  animation: placeholderPulse 1s infinite ease-in-out;
+                  -webkit-animation: placeholderPulse 1s infinite ease-in-out;
+
+                }
+
+                @keyframes placeholderPulse {
+                  0% {
+                    background-color: rgba(133, 214, 251, .1);
+                    color: rgba(133, 214, 251, .1);
+                  }
+
+                  50% {
+                    background-color: rgba(133, 214, 251, .3);
+                    color: rgba(133, 214, 251, .3);
+                  }
+
+                  100% {
+                    background-color: rgba(133, 214, 251, .1);
+                    color: rgba(133, 214, 251, .1);
+                  }
+                }
+
+                .ps.nav {
+                  flex-wrap: nowrap;
+                  position: relative;
+                }
+              </style>
+
+
+
+              <div class="position-relative d-none d-xl-block" style="min-height:190px;">
+                <div id="newDC-tutorials" style="transition: opacity 500ms ease-in 0s; opacity: 1;">
+                  <div
+                    class="px-3 alert alert-light bg-white white overflow-hidden d-flex align-items-center justify-content-center mb-0"
+                    style="border: 1px solid rgb(20, 75, 163); height: 190px; border-radius: 0.5em; background-color: rgb(251, 251, 251);">
+                    <div>
+                      <p class="mb-2 text-neutral-300"><strong>Free UI/UX design course</strong></p>
+                      <p>Learn how to create exceptional designs by reading my new tutorial. </p><a target="_blank"
+                        href="https://material-minimal.com/" role="button" class="btn btn-sm btn-block text-lowercase"
+                        style="box-shadow: none; color: rgb(39, 80, 144); background-color: rgb(227, 235, 247);"><span
+                          class="text-uppercase">S</span>tart learning<i
+                          class="fas fa-angle-right text-primary ms-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+
+            <div class="accordion accordion-borderless mt-4" id="tutorials-menu" data-mdb-perfect-scrollbar="true"
+              style="position: relative; height: 100vh">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBasics">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseBasics" aria-expanded="true" aria-controls="collapseBasics">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Basics
+                  </button>
+                </h2>
+                <div id="collapseBasics" class="accordion-collapse collapse" aria-labelledby="headingBasics"
+                  data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/basics/introduction/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Introduction</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/basics/key-concepts/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Key concepts</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/basics/quick-start/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Quick start</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/basics/deploy-your-project/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Deploy your project</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBootstrap">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Bootstrap
+                  </button>
+                </h2>
+                <div id="collapseBootstrap" class="accordion-collapse collapse" aria-labelledby="headingBootstrap"
+                  data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/about/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About Bootstrap</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/versions/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Versions</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/download-and-setup/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Download &amp; setup</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/containers/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Containers</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/grid-system/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Grid system</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/create-landing-page/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Create a Landing Page</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/navbar/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Navbar</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/hero-image/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Hero image</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/flexbox/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Flexbox</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/text-and-spacing/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Text &amp; spacing</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/masks/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Masks</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/buttons/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Buttons</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/carousel/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Carousel</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/rounded-corners/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Rounded corners</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/shadows/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Shadows</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/icons-and-lists/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Icons and lists</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/grid-tips-and-tricks/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Grid tips and tricks</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/cards/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Cards</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/reorder-columns/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Reorder columns</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/sizing/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Sizing</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/forms/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Forms</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/badges/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Badges</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/footer/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Footer</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/deploy/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Deploy</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/bootstrap/repository/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Repository</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMDBUIKIT">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseMDBUIKIT" aria-expanded="false" aria-controls="collapseMDBUIKIT">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>MDBootstrap
+                  </button>
+                </h2>
+                <div id="collapseMDBUIKIT" class="accordion-collapse collapse" aria-labelledby="headingMDBUIKIT"
+                  data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/about/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About MDBootstrap</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/download-and-setup/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Download &amp; setup</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/mdb-cli/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>MDB CLI</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/create-portfolio/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Create a Portfolio</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/split-screen/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Split screen</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/half-carousel/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Half carousel</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/material-minimal/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Material Minimal</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/nested-flexbox/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Nested flexbox</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/sticky-navbar/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Sticky navbar</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/logo/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Logo</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/animated-navbar/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Animated navbar</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/cascading-cards/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Cascading cards</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/responsive-images/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Responsive images</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/modals/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Modals</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/modals-advanced-features/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Modals advanced features</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/cascading-effect/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Cascading effect</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/filters/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Filters</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/transforms/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Transforms</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/hover-effects/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Hover effects</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/elevation/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Elevation</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/dividers/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Dividers</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/google-maps/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Google maps</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/social-media-buttons/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Social media buttons</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/animations/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Animations</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-ui-kit/deployment-and-repository/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Deployment and repository</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMDBGO">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseMDBGO" aria-expanded="false" aria-controls="collapseMDBGO">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>MDB GO
+                  </button>
+                </h2>
+                <div id="collapseMDBGO" class="accordion-collapse collapse" aria-labelledby="headingMDBGO"
+                  data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/about/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About MDB GO</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/nodejs-and-npm-installation/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Node.js &amp; NPM installation</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/mdb-go-and-mdb-cli-installation/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>MDB GO &amp; MDB CLI installation</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/terminal-basics/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Terminal basics</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/initialize-new-project/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Initialize new project</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/publish-update-project/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Publish and update project</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/custom-domains/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Custom domains</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/repository/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Repository</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/git-basics/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Git basics</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/collaboration/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Collaboration</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-go/sftp/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>FTP/SFTP</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMDBAdvancedFeatures">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseMDBAdvancedFeatures" aria-expanded="false"
+                    aria-controls="collapseMDBAdvancedFeatures">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>MDB advanced features
+                  </button>
+                </h2>
+                <div id="collapseMDBAdvancedFeatures" class="accordion-collapse collapse"
+                  aria-labelledby="headingMDBAdvancedFeatures" data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/about/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About MDB advanced features</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/vite/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Vite</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/sass-scss/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Sass/scss</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/optimization/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Optimization</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/utility-api/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Utility API</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/customization/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Customization</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/internationalization/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Internationalization (i18n)</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/rtl/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>RTL</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/vsc-snippets/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>VSC snippets</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/mdb-advanced-features/theming-and-dark-mode/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Theming and dark mode</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCreateBlog">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseCreateBlog" aria-expanded="false" aria-controls="collapseCreateBlog">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Create a Blog
+                  </button>
+                </h2>
+                <div id="collapseCreateBlog" class="accordion-collapse collapse" aria-labelledby="headingCreateBlog"
+                  data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/about/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About the Blog project</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/preparation/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Preparation</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/ux-design/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>User Experience design</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/primary-questions/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Primary questions</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/secondary-questions/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Secondary questions</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/navbar/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Navbar</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/intro-section/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Intro section</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/posts/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Posts</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/about-author/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>About the author</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/footer/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Footer</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/metadata-and-seo/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Metadata and seo</a>
+
+                      <a class='list-group-item list-group-item-action px-3 border-0 '
+                        href="/learn/mdb-foundations/create-blog/deploy/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Deploy</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCreateeCommerce">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseCreateeCommerce" aria-expanded="false"
+                    aria-controls="collapseCreateeCommerce">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Create an eCommerce
+                  </button>
+                </h2>
+                <div id="collapseCreateeCommerce" class="accordion-collapse collapse"
+                  aria-labelledby="headingCreateeCommerce" data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 ' href="/learn/coming-soon/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Start</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCreateAdminDashboard">
+                  <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseCreateAdminDashboard" aria-expanded="false"
+                    aria-controls="collapseCreateAdminDashboard">
+                    <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Create an Admin Dashboard
+                  </button>
+                </h2>
+                <div id="collapseCreateAdminDashboard" class="accordion-collapse collapse"
+                  aria-labelledby="headingCreateAdminDashboard" data-mdb-parent="#tutorials-menu">
+                  <div class="accordion-body">
+                    <div class="list-group list-group-light list-group-small ">
+                      <a class='list-group-item list-group-item-action px-3 border-0 ' href="/learn/coming-soon/">
+                        <i class="fas fa-circle fa-sm me-2 opacity-40"></i>Start</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const currentProgress = JSON.parse(localStorage.getItem('mdb.tutorial.progress') || '[]');
+    const checkProgress = Array.from(currentProgress).includes(location.pathname);
+    if (!checkProgress) {
+      currentProgress.push(location.pathname);
+      localStorage.setItem('mdb.tutorial.progress', JSON.stringify(currentProgress));
+    }
+
+    const accordion = document.getElementById("tutorials-menu");
+    const tutorials = accordion.querySelectorAll(".accordion-item");
+
+
+    tutorials.forEach((tutorial) => {
+      const links = tutorial.querySelectorAll(".accordion-collapse a");
+      const progress = localStorage.getItem("mdb.tutorial.progress");
+
+      links.forEach((link) => {
+        if (progress.includes(link.getAttribute("href"))) {
+          link.classList.add("seen-lesson");
+          const [children] = link.querySelectorAll('i');
+          children.classList.remove("fa-circle", "opacity-40");
+          children.classList.add("fa-check-circle", "text-primary");
+        }
+      });
+    });
+
+    tutorials.forEach((tutorial) => {
+      const links = tutorial.querySelectorAll(".accordion-collapse a");
+      links.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+          link.parentElement.parentElement.parentElement.classList.add("show");
+          console.log(link.parentElement.parentElement.parentElement.parentElement.firstElementChild.firstElementChild);
+          link.parentElement.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.classList.remove("collapsed");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
+      const activeLinks = tutorial.querySelectorAll(".accordion-collapse a.seen-lesson");
+      if (links.length === activeLinks.length) {
+        const accordionHeader = tutorial.querySelector('.accordion-header');
+        accordionHeader.classList.add('active');
+        const [children] = accordionHeader.querySelectorAll('i');
+        children.classList.remove("fa-circle", "opacity-40");
+        children.classList.add("fa-check-circle", "text-primary");
+
+      }
+    });
+  </script>
+
+  <style>
+    @media (max-width: 1440px) {
+      #mdb-footer {
+        padding-left: 0;
+      }
+    }
+  </style>
+
+  <footer id="mdb-footer" class="mt-5" style="background-color: hsl(216, 25%, 95.1%);  display:none!important; ">
+    <div class="container py-5">
+
+      <div class="text-center">
+
+        <p class="">
+          Get useful tips & free resources directly to your inbox along with exclusive subscriber-only content.
+        </p>
+        <a href="https://mdbootstrap.com/newsletter/" class="btn btn-primary">JOIN OUR MAILING LIST NOW<i
+            class="fas fa-angle-double-right ms-2"></i></a>
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="text-center p-3" style="background-color: hsl(216, 25%, 90%);">© 2023
+      Copyright:
+      <a class="" href="https://mdbootstrap.com/"> <strong>MDBootstrap.com</strong></a>
+    </div>
+
+  </footer>
+
+  <span id="dpl-mdb5-cookies-modal"></span>
+  <span id="dpl-newmdb-docs-snippets-modal"></span>
+
+  <div class="modal fade" id="apiRestrictedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <section>
+            <div class="text-center">
+              <h3 class="font-weight-bold border border-primary p-3 mb-3">Access restricted</h3>
+
+              <h5><strong>To view this section you must have an active PRO account</strong></h5>
+
+              <p>
+                <strong>Log in</strong> to your account or
+                <strong>purchase an MDB5 PRO subscription</strong> if you don't have one.
+              </p>
+
+              <a class="btn btn-primary me-1 auth-modal-toggle" data-auth-modal-tab="sign-in"
+                data-mdb-dismiss="modal">Login</a>
+              <a class="btn btn-secondary" target="_blank" role="button">Buy MDB Pro</a>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    const CONFIG = {
+      docsApiUrl: "https://mdbootstrap.com/api/docs"
+    };
+
+    const supportedLanguages = {
+      en: {
+        flag: 'flag-united-kingdom',
+        name: 'English'
+      },
+      cn: {
+        flag: 'flag-china',
+        name: '中文'
+      }
+    };
+
+    const currencySymbols = {
+      USD: '$',
+      EUR: '€',
+      GBP: '£',
+      INR: '₹',
+    };
+
+    function getSiteLanguage() {
+      const [, language] = location.pathname.split('/');
+      switch (language) {
+        case 'cn': return 'cn';
+        case 'es': return 'cn';
+        default: return 'en';
+      }
+    }
+
+    function getCurrentTechnology(url) {
+      const currentUrl = url || location.pathname;
+      switch (true) {
+        case (currentUrl.indexOf('/docs/standard') === 0): return 'standard';
+        case (currentUrl.indexOf('/docs/angular') === 0): return 'b5-angular';
+        case (currentUrl.indexOf('/docs/b5/angular') === 0): return 'b5-angular';
+        case (currentUrl.indexOf('/docs/react') === 0): return 'b5-react';
+        case (currentUrl.indexOf('/docs/b5/react') === 0): return 'b5-react';
+        case (currentUrl.indexOf('/docs/b5/vue') === 0): return 'b5-vue';
+        case (currentUrl.indexOf('/docs/b4/jquery') === 0): return 'jquery';
+        case (currentUrl.indexOf('/docs/b4/angular') === 0): return 'angular';
+        case (currentUrl.indexOf('/docs/b4/react') === 0): return 'react';
+        case (currentUrl.indexOf('/docs/vue') === 0): return 'b5-vue';
+        case (currentUrl.indexOf('/docs/b4/vue') === 0): return 'vue';
+      }
+    }
+
+    function getCookie(name) {
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const cookies = decodedCookie.split(';');
+
+      for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+          return cookie.substring(name.length, cookie.length);
+        }
+      }
+
+      return null;
+    }
+
+    document.addEventListener('dpl_loaded', e => {
+      const cookieName = 'MDBGoSubscriptionTier';
+      const authUser = e.detail;
+      if (authUser.isGoPro && !getCookie(cookieName)) {
+        _setCookie(cookieName, 'Professional', 365);
+      }
+    });
+
+    function _setCookie(cname, cvalue, exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+  </script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (e) => {
+
+      function checkSidenavActiveLinks() {
+
+        document.querySelectorAll('.sidenav-menu li').forEach((menu) => {
+
+          var collapse = document.querySelectorAll('ul.sidenav-collapse li').forEach((link) => {
+            var is_active = link.querySelector('a.sidenav-link').classList.contains('active');
+            var collapseIcon = menu.querySelector('.rotate-icon');
+
+            if (is_active && collapseIcon) {
+              link.classList.add('show');
+              return false;
+            }
+          });
+        });
+      }
+
+
+      checkSidenavActiveLinks();
+
+      const setTransitionProperties = () => {
+        const sidenav = document.getElementById('mdb-sidenav');
+        const rotateIcons = sidenav.querySelectorAll('.rotate-icon');
+        const collapse = sidenav.querySelectorAll('.sidenav-collapse');
+
+        rotateIcons.forEach(icon => {
+          icon.style.transitionProperty = 'transform'
+        });
+
+        collapse.forEach(collapse => {
+          collapse.style.transitionProperty = 'height'
+        });
+      }
+
+
+      setTimeout(setTransitionProperties, 1);
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript"
+    src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/mdb5/standard/core.min.js"></script>
+
+
+
+  <script type="text/javascript"
+    src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/search/search.min.js"></script>
+  <script src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/main.min.js"></script>
+
+
+  <script>
+    let isSidenavHidden = false;
+    isSidenavHidden = true;
+    const sidenav = document.getElementById('mdb-sidenav');
+    const instance = mdb.Sidenav.getInstance(sidenav);
+
+
+    let innerWidth = null;
+
+    const setMode = () => {
+      if (window.innerWidth === innerWidth) return;
+
+      innerWidth = window.innerWidth;
+      const isFrontPage = 0;
+
+      if (innerWidth <= 1440 || isFrontPage || isSidenavHidden) {
+        instance.changeMode('over');
+        instance.hide();
+        return;
+      }
+      instance.changeMode('side');
+      instance.show();
+    };
+
+    if (sidenav) {
+      window.addEventListener('resize', setMode);
+      setMode();
+    }
+
+
+
+    function mdbScrollSpyTo(e) {
+      e.preventDefault();
+      const hash = e.target.getAttribute('href');
+      const target = document.getElementById(hash.substring(1));
+
+      window.scroll({
+        top: target.offsetTop - 100,
+        behavior: 'smooth'
+      });
+
+      if (history.pushState) {
+        history.pushState(null, null, hash);
+      } else {
+        location.hash = hash;
+      }
+    }
+
+    document.querySelectorAll('#scrollspy .menu-sidebar a').forEach((link) => {
+      link.addEventListener('click', mdbScrollSpyTo, false);
+    });
+
+
+    if (window.location.hash) {
+      const target = document.getElementById(window.location.hash.substring(1));
+
+      setTimeout(function () {
+        window.scroll({
+          top: 0
+        });
+
+        setTimeout(() => {
+          window.scroll({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }, 1000);
+      }, 1);
+    }
+
+
+
+
+    window.addEventListener("load", (event) => {
+      const locationHash = window.location.hash;
+      const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      if (locationHash === "#docsTabsAPI") {
+        const apiTab = document.querySelector('#docs-nav-pills a[href="#docsTabsAPI"]');
+
+        if (apiTab) {
+          const apiTabsInstance = new mdb.Tab(apiTab);
+
+          apiTabsInstance.show();
+          scrollTop();
+        }
+      } else if (locationHash === "#docsTabsOverview") {
+        scrollTop();
+      } else if (["#topTemplates", "#newTemplates", "#trendingTemplates"].indexOf(locationHash) !== -1) {
+        const templateTab = document.querySelector('#templates-nav-pills a[href="' + locationHash + '"]');
+
+        if (templateTab) {
+          const templateTabsInstance = new mdb.Tab(templateTab);
+
+          templateTabsInstance.show();
+          scrollTop();
+        }
+      }
+
+      const navPills = document.querySelectorAll('#docs-nav-pills a[data-mdb-toggle="tab"]');
+
+      if (navPills.length) {
+        navPills.forEach((el) => {
+          el.addEventListener('click', (e) => {
+            window.location.hash = e.target.hash;
+
+            scrollTop();
+          });
+        });
+      }
+
+      const templatePills = document.querySelectorAll('#templates-nav-pills a[data-mdb-toggle="pill"]');
+
+      if (templatePills.length) {
+        templatePills.forEach((el) => {
+          el.addEventListener('click', (e) => {
+            window.location.hash = e.target.hash;
+
+            scrollTop();
+          });
+        });
+      }
+    });
+  </script>
+
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById('mdb-5-search-input');
+      const searchIcon = document.getElementById('mdb-5-search-icon');
+      const searchList = document.getElementById('mdb-5-search-list');
+      const searchForm = document.getElementById('mdb-5-search-container');
+      const searchDropdown = document.getElementById('mdb-5-search-dropdown');
+      const searchCount = document.getElementById('mdb-5-search-count');
+
+      let searchJsonFile = "https://mdbootstrap.com/wp-content/themes/mdbootstrap4/docs-app" + '/js/dist/search/';
+
+      switch ("standard") {
+        case 'b5-angular':
+          searchJsonFile += 'search-angular.json'
+          break;
+        case 'b5-react':
+          searchJsonFile += 'search-react.json'
+          break;
+        case 'b5-vue':
+          searchJsonFile += 'search-vue.json'
+          break;
+        default:
+          searchJsonFile += 'search.json'
+          break;
+      }
+
+      const search = new Search(searchInput, searchIcon, searchList, searchForm, searchDropdown, searchCount, searchJsonFile);
+
+      search.init();
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

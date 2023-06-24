@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../static/css/1.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/detail.css">
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+</head>
+<body>
+	<div id="app" class="main">
+
+		<div id="detail">
+			
+			<h2>splice</h2>
+
+			<table>
+				<tr>
+					<td>使用说明</td>
+					<td>array.splice(start,[count],[replace])</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>返回值</td>
+					<td>删除数组元素组成的新数组</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>作用说明</td>
+					<td></td>
+					<td>备注</td>
+				</tr>
+				<tr>
+					<td>参数start</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>参数count</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>参数replace</td>
+					<td></td>
+					<td></td>
+				</tr>	
+			</table>
+			<blockquote>
+			<p>splice,可实现在数组任意位置插入,删除元素</p>
+			</blockquote>
+
+
+
+			<h2>slice,切片操作</h2>
+
+			<blockquote>
+			<p>根据数组的索引,截取start,到end部分之间的元素,返回一个新数组,不会修改原数组,个人将slice方法其称之为切片操作,参考python,</p>
+			</blockquote>
+			
+			不包含边界end,
+			start,end
+
+
+	
+			<h2>如何实现数组的克隆?</h2>
+			<p>
+				使用slice可实现克隆,但属于是浅克隆,
+				何为浅克隆
+			</p>
+
+			<h2>数组的查询操作</h2>
+
+
+			<h3>includes</h3>
+
+			判断数组是否包含某元素,返回一个布尔值
+
+			只关注数组是否存在元素,不关注元素在数组中的位置时可用includes方法
+
+			
+
+
+			
+
+			<blockquote>
+			<p>根据数组的索引,截取start,到end部分之间的元素,返回一个新数组,不会修改原数组,个人将slice方法其称之为切片操作,参考python,</p>
+			</blockquote>
+				
+
+
+
+
+		<h2>求数组所有元素之和</h2>
+		
+		<p>方法1</p>
+		<pre>
+			<code class="language-js">let nums = [1,2,3,4,5];
+const tmp=nums.reduce((result,current,index,arr)=>{
+    console.log(result,current,index,arr);
+    result += current;
+    return result;
+});
+console.log(sum,tmp);</code>
+		</pre>
+
+
+		<p>方法2</p>
+		<pre>
+			<code class="language-js">let nums = [1,2,3,4,5];
+const tmp=nums.reduce((result,current,index,arr)=>{
+    console.log(result,current,index,arr);
+    result += current;
+    return result;
+});
+console.log(sum,tmp);</code>
+		</pre>
+
+		</div>
+
+		
+	</div>
+
+	<script type="text/javascript" src="https://cdn.ibiancheng.net/js/library.js"></script>
+	<script type="text/javascript">
+		const vm=new Vue({
+			el:"#app",
+			data:{
+				top:0,
+				nums:0,
+				images:[
+					"./images/1.jpg",
+					"./images/2.jpg",
+					"./images/3.jpg",
+					// "./images/4.jpg",
+					// "./images/5.jpg"
+				],
+				height1:0,
+				height2:0,
+				timer:null
+			},
+			methods:{
+				start(){
+					//this.top=-this.height1;
+					// this.timer=setInterval(()=>{
+					// 	console.log(this.$refs.two.offsetTop);
+					// 	this.$refs.two.offsetTop -= 5;
+					// },20);
+					this.timer=setInterval(()=>{
+						if(this.top<=-this.$refs.two.offsetHeight){
+							this.top = 0;
+						}else{
+							this.top -= 1;
+						}
+					},20);
+
+				},
+				stop(){
+					clearInterval(this.timer);
+				}
+			},
+		  	computed: {
+		    	translate() {
+		    		console.log(this.top);
+		      		return {
+		        		'transform':`translateY(${this.top}px)`
+		      		}
+		    	}
+		   	},
+			mounted(){
+				this.nums=this.images.length+1;
+				this.height1=this.$refs.one.offsetHeight;
+				this.height3=this.$refs.two.firstChild.offsetHeight;
+
+				console.log(this.$refs.two.firstChild);
+				console.log(this.height3);
+				
+				console.log(this.$refs.two);
+				this.height2=5*this.height3;
+				console.log(this.height1,this.height2,this.height3);
+				if(this.images.length>1){
+					// this.images=this.images.reverse();
+					// this.images.push(this.images[0]);
+					// this.images=this.images.reverse();
+					// this.images.push(this.images[1]);
+					// this.$refs.two.style.marginTop = -this.height3+'px';
+					//img=img.reverse().push(this.images[0]);
+					//console.log(img);
+					//this.images=img;
+					//this.images.push(...this.images);
+					this.start();
+				}
+			}
+		});
+	</script>
+</body>
+</html>
